@@ -1,0 +1,1 @@
+{"nodes": [{"id": "jesreal_png", "label": "Jesreal.png", "file_type": "image", "source_file": "frontend/public/AuthorsPic/Jesreal.png"}], "edges": [{"source": "jesreal_png", "target": "authors_pic_directory", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "frontend/public/AuthorsPic/Jesreal.png"}], "hyperedges": []}
