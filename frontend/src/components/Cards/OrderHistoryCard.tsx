@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Clock, CreditCard, ChevronDown, ChevronUp, ShoppingBag } from "lucide-react";
-import AddReview from "@/components/Reviews/AddReview";
+import { Clock, CreditCard, ChevronRight, ShoppingBag } from "lucide-react";
 import OrderDelButton from "../Buttons/DeleteButtons/OrderDelButton";
 import PayUnpaidOrderForm from "../PopUps/PayUnpaidOrderForm";
+import { useNavigate } from "react-router-dom";
 
 interface OrderedItem {
   id: number;
@@ -35,10 +35,9 @@ interface OrderProps {
 }
 
 const OrderHistoryCard: React.FC<OrderProps> = ({ order, payments }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isExpanded2, setIsExpanded2] = useState(false);
   const orderPayments = payments.filter((payment) => payment.order === order.id);
   const [isPayOpen, setIsPayOpen] = useState(payments.length === 0);
+  const navigate = useNavigate();
 
   const dishDetails = order.ordered_items.map((item) => ({
     id: item.dishId,
@@ -68,86 +67,84 @@ const OrderHistoryCard: React.FC<OrderProps> = ({ order, payments }) => {
     }
   };
 
+  const handleCardClick = () => {
+    navigate(`/order/${order.id}`, { state: { order, payments } });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-5/6 mx-auto overflow-hidden rounded-xl shadow-sm border border-green-100 bg-white transition-all duration-300 hover:shadow-md"
+      onClick={handleCardClick}
+      className="w-full mx-auto overflow-hidden rounded-3xl shadow-sm border border-gray-100 bg-white transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] cursor-pointer"
     >
-      <div className="bg-[#a0c878] p-4 text-white">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <ShoppingBag className="w-5 h-5" />
-            <h3 className="font-bold">Order #{order.id}</h3>
+      <div className="p-5 md:p-6 border-b border-gray-50 flex justify-between items-center gap-4">
+        <div className="flex items-center space-x-3">
+          <div className="bg-[#a0c878]/15 p-3 rounded-2xl hidden sm:block">
+            <ShoppingBag className="w-6 h-6 text-[#a0c878]" />
           </div>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(order.status)}`}>
-            {order.status}
+          <div>
+            <h3 className="font-heading font-bold text-lg md:text-xl text-gray-900 leading-tight">Order #{order.id}</h3>
+            <span className="text-xs md:text-sm text-gray-500 font-outfit">{formattedDate}</span>
           </div>
+        </div>
+        <div className={`px-3 md:px-4 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide uppercase flex-shrink-0 ${getStatusColor(order.status)}`}>
+          {order.status}
         </div>
       </div>
 
-      <div className="p-5">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-          <div className="flex flex-col">
-            <span className="text-xs text-gray-500 uppercase tracking-wider">Date Placed</span>
-            <div className="flex justify-center items-center mt-1 text-gray-700 ">
-              <Clock className="w-4 h-4 mr-1 text-green-600 " />
-              <span>{formattedDate}</span>
+      <div className="p-5 md:p-6">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-6">
+
+          <div className="flex flex-col items-center space-y-1">
+            <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider text-center">Payment</span>
+            <div className="flex items-center justify-center text-gray-800 font-medium text-sm md:text-base">
+              <CreditCard className="w-3 h-3 md:w-4 md:h-4 mr-1.5 text-[#a0c878]" />
+              {orderPayments[0]?.payment_method ?? "Not Paid"}
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <span className="text-xs text-gray-500 uppercase tracking-wider">Payment Method</span>
-            <div className="flex items-center mt-1 text-gray-700 justify-center">
-              <CreditCard className="w-4 h-4 mr-1 text-green-600" />
-              <span>{orderPayments[0]?.payment_method ?? "Not Paid"}</span>
+          <div className="flex flex-col items-center space-y-1">
+            <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider text-center">Items</span>
+            <div className="flex items-center justify-center text-gray-800 font-medium text-sm md:text-base">
+              <ShoppingBag className="w-3 h-3 md:w-4 md:h-4 mr-1.5 text-[#a0c878]" />
+              {order.ordered_items.length} items
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <span className="text-xs text-gray-500 uppercase tracking-wider">Items</span>
-            <div className="flex items-center mt-1 text-gray-700 justify-center">
-              <ShoppingBag className="w-4 h-4 mr-1 text-green-600" />
-              <span>{order.ordered_items.length} items</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <span className="text-xs text-gray-500 uppercase tracking-wider">Total Amount</span>
-            <div className="flex items-center mt-1 font-bold justify-center">
+          <div className="flex flex-col items-center space-y-1">
+            <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider text-center">Total</span>
+            <div className="flex items-center justify-center text-lg md:text-xl font-outfit font-extrabold text-center">
               ${order.total_price.toFixed(2)}
             </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 mt-4 border-t pt-4">
-          {orderPayments?.length > 0 ? (
-            <button
-              onClick={() => setIsExpanded2(!isExpanded2)}
-              className="flex items-center px-3 py-2 text-sm text-black rounded-lg border shadow-sm"
-            >
-              {isExpanded2 ? "Hide Payment Details" : "View Payment Details"}
-              {isExpanded2 ? <ChevronUp className="ml-1 w-4 h-4" /> : <ChevronDown className="ml-1 w-4 h-4" />}
-            </button>
-          ) : (
-            <button
-              className="flex items-center px-3 py-2 text-sm bg-black text-white rounded-md hover:bg-[#a0c878] transition-colors"
-              onClick={() => setIsPayOpen(true)}
-            >
-              Pay Now
-            </button>
-          )}
+        <div 
+          className="flex flex-row items-center justify-between pt-5 md:pt-6 border-t border-gray-50"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex gap-2 md:gap-3 flex-wrap">
+            {orderPayments?.length === 0 && (
+              <button
+                className="flex items-center px-4 md:px-6 py-2 md:py-2.5 text-xs md:text-sm font-bold bg-[#a0c878] text-white rounded-full hover:bg-[#8fb86a] shadow-md shadow-[#a0c878]/20 transition-all"
+                onClick={() => setIsPayOpen(true)}
+              >
+                Pay Now
+              </button>
+            )}
 
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center px-3 py-2 text-sm text-black rounded-lg border shadow-sm"
-          >
-            {isExpanded ? "Hide Order Details" : "View Order Details"}
-            {isExpanded ? <ChevronUp className="ml-1 w-4 h-4" /> : <ChevronDown className="ml-1 w-4 h-4" />}
-          </button>
+            <button
+              onClick={() => navigate(`/order/${order.id}`, { state: { order, payments } })}
+              className="flex items-center px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-semibold text-gray-700 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              View Details
+              <ChevronRight className="ml-1 md:ml-1.5 w-3 h-3 md:w-4 md:h-4" />
+            </button>
+          </div>
 
-          <div className="ml-auto">
+          <div className="flex-shrink-0">
             <OrderDelButton OrderId={order.id} />
           </div>
 
@@ -157,78 +154,8 @@ const OrderHistoryCard: React.FC<OrderProps> = ({ order, payments }) => {
             order={order}
             dishDetails={dishDetails}
           />
-
         </div>
       </div>
-
-      {isExpanded2 && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: 'auto', opacity: 1 }}
-          transition={{ duration: 0.1 }}
-          className="bg-green-50 p-5 border-t border-green-100"
-        >
-          <h4 className="font-medium text-green-800 mb-3">Payment Information</h4>
-          {payments
-            .filter((payment) => payment.order === order.id)
-            .map((payment) => (
-              <div key={payment.id} className="bg-white p-4 rounded-lg shadow-sm">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-500">Payment ID</span>
-                  <span className="font-small">{payment.id}</span>
-                </div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-500">Method</span>
-                  <span className="font-small">{payment.payment_method || "N/A"}</span>
-                </div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-500">Transaction ID</span>
-                  <span className="font-small">{payment.transaction_id || "N/A"}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">Amount</span>
-                  <span className="font-bold">${payment.amount.toFixed(2)}</span>
-                </div>
-              </div>
-            ))}
-        </motion.div>
-      )}
-
-      {isExpanded && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: 'auto', opacity: 1 }}
-          transition={{ duration: 0.1 }}
-          className="border-t border-green-100"
-        >
-          <h4 className="font-medium text-green-800 p-4 bg-green-50">Ordered Items</h4>
-          <div className="divide-y divide-gray-10">
-            {order.ordered_items.map((item) => (
-              <div key={item.id} className="p-3 px-5 hover:bg-gray-50 transition-colors">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                    <img
-                      src={item.image}
-                      alt={item.dish_name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start">
-                      <h3 className="font-medium text-gray-900">{item.dish_name}</h3>
-                      <div className=" font-bold">${item.subtotal.toFixed(2)}</div>
-                    </div>
-                    <div className="mt-5 flex items-center justify-between text-xs text-gray-500">
-                      Quantity: {item.quantity}x
-                      <AddReview dishId={item.dishId} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
     </motion.div>
   );
 };

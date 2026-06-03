@@ -1,22 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { Heart } from "lucide-react";
 import useMutationCart from "@/utils/Hooks/Tanstack/Wishlist/useMutationCart";
+import useQueryCart from "@/utils/Hooks/Tanstack/Wishlist/useQueryCart";
 
 interface WishlistButtonProps {
   dishId: number;
 }
 
 const WishlistButton: React.FC<WishlistButtonProps> = ({ dishId }) => {
-  const { useMutationCartAdd } = useMutationCart();
-  const { mutate: addToWishlist, isPending: loading, error } = useMutationCartAdd();
+  const { data: cartData } = useQueryCart();
+  const { useMutationCartAdd, useMutationCartDel } = useMutationCart();
+  const { mutate: addToWishlist, isPending: adding, error: addError } = useMutationCartAdd();
+  const { mutate: removeFromWishlist, isPending: removing, error: removeError } = useMutationCartDel();
+
+  const error = addError || removeError;
 
   const [isWishlisted, setIsWishlisted] = useState(false);
 
+  useEffect(() => {
+    if (cartData) {
+      setIsWishlisted(cartData.some((item) => item.dish_data.id === dishId));
+    }
+  }, [cartData, dishId]);
+
   const handleWishlist = async () => {
-    if (isWishlisted) return;
-    addToWishlist({ dishId }, { onSuccess: () => setIsWishlisted(true) });
+    if (adding || removing) return;
+
+    if (isWishlisted) {
+      const cartItem = cartData?.find(item => item.dish_data.id === dishId);
+      if (cartItem) {
+        removeFromWishlist(cartItem.id, { onSuccess: () => setIsWishlisted(false) });
+      }
+    } else {
+      addToWishlist({ dishId }, { onSuccess: () => setIsWishlisted(true) });
+    }
   };
+
+  const loading = adding || removing;
 
   return (
     <div>

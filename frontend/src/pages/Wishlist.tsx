@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import WishlistCard from "@/components/Cards/WishlistCard";
+import ProductCard from "@/components/Cards/ProductCard";
 import { Loader2 } from "lucide-react";
 import { CartItem } from "@/types/Types";
 import useQueryCart from "@/utils/Hooks/Tanstack/Wishlist/useQueryCart";
@@ -46,17 +46,34 @@ const Wishlist = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="bg-gray-50 p-6 min-h-screen"
+      className="container mx-auto px-4 py-4 min-h-screen"
     >
-      <h2 className="text-2xl font-bold mb-4">Wishlist</h2>
+      <div className="text-center mb-12 mt-6">
+        <motion.span 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-food-orange font-outfit font-semibold tracking-wider uppercase text-sm mb-3 block"
+        >
+          Your Favorites
+        </motion.span>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-heading font-bold text-food-dark"
+        >
+          My <span className="text-food-emerald">Wishlist</span>
+        </motion.h2>
+        <div className="w-24 h-1 bg-food-orange/30 mx-auto mt-6 rounded-full" />
+      </div>
+
       <AnimatePresence>
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2 }}
         >
-          {cart.length > 0 ? (
+          {cart && cart.length > 0 ? (
             cart.map((item: CartItem) => (
               <motion.div
                 key={item.id}
@@ -66,9 +83,8 @@ const Wishlist = () => {
                 className="cursor-pointer"
                 onClick={() => navigate(`/product/${item.dish_data.id}`)}
               >
-                <WishlistCard
+                <ProductCard
                   dish={item.dish_data}
-                  cartId={item.id}
                 />
               </motion.div>
             ))

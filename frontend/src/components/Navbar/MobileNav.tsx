@@ -30,7 +30,10 @@ const MobileNav = ({ open, setOpen, setSearchQuery }: MobileNavProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open, setOpen]);
   
-  const handleNavClick = (path: string) => {
+  const handleNavClick = (path: string, isHome: boolean = false) => {
+    if (isHome) {
+      setSearchQuery("");
+    }
     navigate(path);
     setOpen(false);
     scrollToTop(); 
@@ -54,7 +57,7 @@ const MobileNav = ({ open, setOpen, setSearchQuery }: MobileNavProps) => {
       >
         <div className="flex flex-row items-center justify-around py-0">
           <button 
-            onClick={() => handleNavClick("/")} 
+            onClick={() => handleNavClick("/", true)} 
             className="flex flex-col items-center gap-1 p-3 rounded-lg hover:bg-gray-100 transition"
           >
             <Home className="w-6 h-6" />

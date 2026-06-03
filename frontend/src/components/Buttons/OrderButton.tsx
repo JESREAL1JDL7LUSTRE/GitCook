@@ -4,16 +4,25 @@ import PaymentPopUpForm from "../PopUps/PaymentPopUpForm";
 import { usePlanToOrderStore } from "../PopUps/Context/PlanToOrderContext"; // ✅ Bulk order store
 import { useAddToOrderWhenPayingStore } from "@/lib/AddToOrderWhenPayingStore";
 
-const OrderButton: React.FC = () => {
+interface OrderButtonProps {
+  selectedItemIds?: number[];
+}
+
+const OrderButton: React.FC<OrderButtonProps> = ({ selectedItemIds }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { setDishDetails } = useAddToOrderWhenPayingStore(); // ✅ Zustand store for checkout
   const planToOrderList = usePlanToOrderStore((state) => state.planToOrderList); // ✅ Get selected items from cart
 
   const handleProceedToPayment = () => {
-    if (planToOrderList.length === 0) return;
+    let dishesToOrder = planToOrderList;
+    if (selectedItemIds) {
+      dishesToOrder = planToOrderList.filter(dish => selectedItemIds.includes(dish.id));
+    }
     
+    if (dishesToOrder.length === 0) return;
+
     // ✅ Ensure quantity is passed correctly
-    const selectedDishes = planToOrderList.map((dish) => ({
+    const selectedDishes = dishesToOrder.map((dish) => ({
       id: dish.id,
       name: dish.name,
       price: dish.price,
@@ -24,9 +33,11 @@ const OrderButton: React.FC = () => {
     setIsOpen(true);
   };
 
+  const isDisabled = selectedItemIds ? selectedItemIds.length === 0 : planToOrderList.length === 0;
+
   return (
-    <div>
-      <Button onClick={handleProceedToPayment} disabled={planToOrderList.length === 0}>
+    <div className="w-full">
+      <Button onClick={handleProceedToPayment} disabled={isDisabled}>
         Buy Now
       </Button>
 
