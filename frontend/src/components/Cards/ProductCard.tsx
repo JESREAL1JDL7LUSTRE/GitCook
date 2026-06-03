@@ -59,11 +59,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ dish }) => {
           </span>
         </div>
       </CardContent>
-      <CardFooter className="p-4 pt-0 mt-auto flex flex-col sm:flex gap-2">
-        <div onClick={(e) => e.stopPropagation()} className="w-full sm:flex-col-1">
+      <CardFooter className="p-4 pt-0 mt-auto flex flex-row gap-2">
+        <div onClick={(e) => e.stopPropagation()} className="flex-1">
           <CartButton dish={{ ...dish, image: dish.image || "/placeholder.png" }} />
         </div>
-        <div onClick={(e) => e.stopPropagation()} className="w-full sm:flex-col-1">
+        <div onClick={(e) => e.stopPropagation()} className="flex-1">
           <PaymentButton dishDetails={[{ id: dish.id, name: dish.name, price: dish.price, quantity: 1 }]} />
         </div>
       </CardFooter>

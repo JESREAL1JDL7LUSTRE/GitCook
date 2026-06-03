@@ -17,8 +17,8 @@ function PaymentButton({ dishDetails }: PaymentButtonProps) {
   };
 
   return (
-    <div>
-      <Button onClick={handleProceedToPayment}>Buy Now</Button>
+    <div className="w-full">
+      <Button className="w-full px-2" onClick={handleProceedToPayment}>Buy Now</Button>
 
       {/* Payment Pop-Up Form */}
       {isOpen && <PaymentPopUpForm isOpen={isOpen} onClose={() => setIsOpen(false)} />}
