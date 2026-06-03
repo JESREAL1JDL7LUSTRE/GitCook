@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ChevronLeft } from "lucide-react";
 import { Card, CardHeader, CardFooter, CardContent } from "@/components/ui/card";
 import WishlistButton from "../Buttons/WishlistButton";
 import PaymentButton from "../Buttons/PaymentButton";
@@ -32,10 +33,11 @@ const ProductDetailsCard: React.FC<ProductDetailsProps> = ({ dish, onBack }) => 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full max-w-4xl mx-auto p-6 md:p-8"
+      className="w-full max-w-4xl mx-auto px-4 md:px-8 pb-12 pt-6"
     >
-      <button onClick={onBack} className="text-blue-500 mb-4 flex">
-        ← Back to Products
+      <button onClick={onBack} className="flex items-center text-food-dark hover:text-food-emerald font-outfit font-semibold transition-colors mb-6 group">
+        <ChevronLeft className="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" />
+        Back to Products
       </button>
 
       <motion.div
@@ -43,51 +45,60 @@ const ProductDetailsCard: React.FC<ProductDetailsProps> = ({ dish, onBack }) => 
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="w-full max-w-xxl grid grid-cols-1 md:grid-cols-2 gap-8 items-start shadow-lg p-6">
+        <Card className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border-none bg-white/80 backdrop-blur-xl p-6 md:p-8 rounded-3xl">
           <div className="relative">
             <img
               src={dish.image || "/placeholder-image.jpg"}
               alt={dish.name}
-              className="object-cover w-full aspect-square rounded-lg shadow-md"
+              className="object-cover w-full aspect-square rounded-3xl shadow-xl transition-transform hover:scale-[1.02] duration-500"
             />
           </div>
 
-          <div className="flex flex-col justify-between space-y-4">
-            <CardHeader className="p-0 space-y-2">
-              <StarRatingShow rating={averageRating} />
-              <div className="flex justify-between items-center">
-                <h1 className="text-xl font-bold py-2 text-start">{dish.name}</h1>
-                <div>
+          <div className="flex flex-col justify-between h-full">
+            <CardHeader className="p-0 space-y-4">
+              <div className="flex justify-between items-start gap-4">
+                <h1 className="font-heading font-bold text-2xl md:text-3xl text-food-dark text-start leading-tight">{dish.name}</h1>
+                <div className="pt-1">
                   <WishlistButton dishId={dish.id} />
                 </div>
               </div>
+              
+              <div className="flex items-center gap-3">
+                <StarRatingShow rating={averageRating} />
+                <span className="text-xs md:text-sm font-outfit text-gray-500 font-medium">({reviews.length} reviews)</span>
+              </div>
 
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2 pt-2">
                 {dish.category_name?.map((category, index) => (
                   <span
                     key={index}
-                    className="bg-green-200 text-green-800 px-3 py-1 text-xs font-medium rounded-md"
+                    className="bg-food-emerald/15 text-food-emerald px-3 py-1 md:px-4 md:py-1.5 text-xs md:text-xs font-outfit font-bold rounded-full tracking-wide uppercase"
                   >
                     {category}
                   </span>
                 )) || (
-                  <span className="bg-gray-200 text-gray-800 px-3 py-1 text-xs font-medium rounded-md">
+                  <span className="bg-gray-100 text-gray-500 px-4 py-1.5 text-xs font-outfit font-bold rounded-full tracking-wide uppercase">
                     Uncategorized
                   </span>
                 )}
               </div>
 
-              <p className="text-2xl font-bold text-start">${dish.price.toFixed(2)}</p>
-              <p className="text-gray-500 text-start">
-                {dish.description || "No description available."}
+              <div className="py-4">
+                <p className="font-outfit font-bold text-3xl md:text-4xl text-food-emerald text-start">${dish.price.toFixed(2)}</p>
+              </div>
+              
+              <p className="font-sans text-gray-600 text-sm md:text-base leading-relaxed text-start pb-6 border-b border-gray-100">
+                {dish.description || "No description available for this dish. It is definitely delicious though!"}
               </p>
             </CardHeader>
 
-            <CardContent className=""></CardContent>
-
-            <CardFooter className="flex flex-col gap-3 p-0">
-              <PlanToOrderButton dish={{ ...dish, image: dish.image || "/placeholder.png" }} />
-              <PaymentButton dishDetails={[{ id: dish.id, name: dish.name, price: dish.price, quantity: 1 }]} />
+            <CardFooter className="flex flex-col sm:flex-row gap-4 p-0 pt-3 mt-4">
+              <div className="w-full sm:flex-1">
+                <PlanToOrderButton dish={{ ...dish, image: dish.image || "/placeholder.png" }} />
+              </div>
+              <div className="w-full sm:flex-1">
+                <PaymentButton dishDetails={[{ id: dish.id, name: dish.name, price: dish.price, quantity: 1 }]} />
+              </div>
             </CardFooter>
           </div>
         </Card>
@@ -98,38 +109,43 @@ const ProductDetailsCard: React.FC<ProductDetailsProps> = ({ dish, onBack }) => 
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <Card className="mt-8">
-          <CardHeader className="text-lg font-bold">Recipe</CardHeader>
-          <CardContent>
-            <p className="text-sm">{dish.recipes || "No recipe details available."}</p>
+        <Card className="mt-8 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border-none rounded-3xl bg-white overflow-hidden">
+          <CardHeader className="bg-food-orange/5 pb-4">
+            <h2 className="font-heading font-bold text-lg md:text-xl text-food-dark text-start">Preparation & Recipe</h2>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <p className="font-sans text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap text-start">{dish.recipes || "No recipe details available. Our chefs keep this one a secret!"}</p>
           </CardContent>
         </Card>
       </motion.div>
 
-      <div className="mt-10 text-start font-bold text-lg">Latest Reviews</div>
+      <div className="mt-12 mb-6 text-start">
+        <h2 className="font-heading font-bold text-xl md:text-2xl text-food-dark">Customer Reviews</h2>
+      </div>
+      
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {reviews.length > 0 ? (
           reviews.map((review) => (
-            <Card key={review.id} className="p-4 shadow-lg border rounded-lg">
-              <div className="text-start">
-                <div className="font-semibold">
-                  <StarRatingShow rating={review.rating} />
-                </div>
-                <div className="flex items-start mt-2 font-semibold">
-                  Review: {review.review ?? "N/A"}
-                </div>
-                <p className="text-start mt-2 text-gray-700">{review.customer_email}</p>
+            <Card key={review.id} className="p-6 shadow-md hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 border-none rounded-3xl bg-white flex flex-col justify-between">
+              <div className="text-start space-y-3">
+                <StarRatingShow rating={review.rating} />
+                <p className="font-sans text-gray-700 italic text-sm md:text-base leading-relaxed">
+                  "{review.review ?? "Great food!"}"
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-gray-100 text-start">
+                <p className="font-outfit font-semibold text-food-dark text-sm">{review.customer_email}</p>
               </div>
             </Card>
           ))
         ) : (
-          <Card className="p-4 shadow-lg border rounded-lg">
-            <p className="text-center text-gray-500">No reviews found</p>
+          <Card className="p-8 shadow-md border-none rounded-3xl bg-white text-center md:col-span-2 lg:col-span-3">
+            <p className="font-outfit text-gray-500 text-base">No reviews yet. Be the first to try this delicious dish!</p>
           </Card>
         )}
       </motion.div>

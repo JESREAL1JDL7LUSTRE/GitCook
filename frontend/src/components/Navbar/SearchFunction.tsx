@@ -1,6 +1,6 @@
 import { Search, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 
 interface SearchProps {
   searchQuery: string | null | undefined;
@@ -12,11 +12,15 @@ const SearchFunction = ({ searchQuery }: SearchProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const location = useLocation(); 
-
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    setQuery("");
-  }, [location.pathname]); 
+    if (location.pathname === "/products") {
+      setQuery(searchParams.get("search") || "");
+    } else if (location.pathname !== "/") {
+      setQuery("");
+    }
+  }, [location.pathname, searchParams]);
 
   
   useEffect(() => {

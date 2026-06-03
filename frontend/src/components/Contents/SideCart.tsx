@@ -28,7 +28,7 @@ const SideCart = () => {
     setSelectedItems((prevSelected) => {
       const newItemIds = planToOrderList.map((dish) => dish.id);
       const stillSelected = prevSelected.filter(id => newItemIds.includes(id));
-      const newSelections = newItemIds.filter(id => 
+      const newSelections = newItemIds.filter(id =>
         !prevSelected.includes(id) && !deselectedItemsRef.current.has(id)
       );
       return [...stillSelected, ...newSelections];
@@ -64,9 +64,8 @@ const SideCart = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 w-full h-full bg-white shadow-xl flex flex-col transform transition-transform duration-300 ${
-        isSideCartOpen ? "translate-x-0" : "translate-x-full"
-      }`}
+      className={`fixed top-0 right-0 w-full h-full bg-white shadow-xl flex flex-col transform transition-transform duration-300 ${isSideCartOpen ? "translate-x-0" : "translate-x-full"
+        }`}
     >
 
 
@@ -117,26 +116,29 @@ const SideCart = () => {
                   </div>
 
                   {/* Dish Details */}
-                  <div className="flex-1 min-w-0 text-start">
-                    <h3 className="md:text-sm text-xs text-gray-900 truncate">{dish.name}</h3>
-                    <p className="font-bold">${dish.price.toFixed(2)}</p>
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <h3 className="md:text-sm text-xs text-gray-900 truncate text-start">{dish.name}</h3>
                     
-                    {/* Quantity Controls */}
-                    <div className="flex items-center gap-3 md:mt-2">
-                      <button
-                        onClick={() => updateDishQuantity(dish.id, -1)}
-                        disabled={dish.quantity <= 1}
-                        className="p-1 rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        <Minus className="md:w-4 md:h-4 w-3 h-3 text-gray-600" />
-                      </button>
-                      <span className="md:text-md text-sm text-gray-900">{dish.quantity}</span>
-                      <button
-                        onClick={() => updateDishQuantity(dish.id, 1)}
-                        className="p-1 rounded-full hover:bg-gray-100"
-                      >
-                        <Plus className="md:w-4 md:h-4 w-3 h-3 text-gray-600" />
-                      </button>
+                    <div className="flex items-center justify-between mt-1">
+                      <p className="font-bold text-start">${dish.price.toFixed(2)}</p>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center gap-3">
+                        <button
+                          onClick={() => updateDishQuantity(dish.id, -1)}
+                          disabled={dish.quantity <= 1}
+                          className="p-1 font-bold rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          <Minus className="md:w-4 md:h-4 w-3 h-3 text-gray-600" />
+                        </button>
+                        <span className="md:text-md text-sm text-gray-900">{dish.quantity}</span>
+                        <button
+                          onClick={() => updateDishQuantity(dish.id, 1)}
+                          className="p-1 rounded-full hover:bg-gray-100"
+                        >
+                          <Plus className="md:w-4 md:h-4 w-3 h-3 text-gray-600" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -148,41 +150,35 @@ const SideCart = () => {
 
       {/* Footer */}
       {planToOrderList.length > 0 && (
-        <div className="border-t p-3 md:space-y-4 space-y-0">
+        <div className="border-t p-4 space-y-4 bg-white shrink-0">
           {/* Total */}
-          <div className="flex md:flex-col flex-row md:gap-2 gap-0 items-start  ">
-            <span className="text-gray-600">Order Total:</span>
-            <span className="md:text-xl font-bold text-md text-gray-900">
+          <div className="flex flex-row items-center justify-between">
+            <span className="text-gray-600 font-medium text-md">Order Total:</span>
+            <span className="text-1xl font-bold text-gray-900">
               ${totalPrice.toFixed(2)}
             </span>
-            <div className="w-1/2 text-white md:hidden">
-              <OrderButton/>
-            </div>
           </div>
 
           {/* Actions */}
-          <div className="space-y-2 md:h-full h-18">
+          <div className="space-y-3">
+            <OrderButton selectedItemIds={selectedItems} />
+
             {selectedItems.length > 0 && (
-              <>
-                <div className="w-full text-white hidden md:block">
-                  <OrderButton/>
-                </div>
-                <div className="items-center justify-center flex gap-2">
-                  <Button
-                    onClick={clearSelectedItems}
-                    className="w-full bg-red-100 text-red-600 hover:bg-red-200"
-                  >
-                    Remove Selected
-                  </Button>
-                  <Button
-                                onClick={() => setIsDialogOpen(true)}
-                                className="w-full flex items-center justify-center gap-2 text-red-600 hover:text-red-700 hover:bg-gray-100 bg-white-100 border-2"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                                Clear Cart
-                              </Button>
-                </div>
-              </>
+              <div className="flex gap-2">
+                <Button
+                  onClick={clearSelectedItems}
+                  className="w-1/2 bg-red-50 text-red-600 hover:bg-red-100 border border-red-100 shadow-sm"
+                >
+                  Remove Selected
+                </Button>
+                <Button
+                  onClick={() => setIsDialogOpen(true)}
+                  className="w-1/2 flex items-center justify-center gap-2 text-red-600 hover:text-red-700 hover:bg-gray-50 bg-white border border-gray-200 shadow-sm"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  Clear Cart
+                </Button>
+              </div>
             )}
           </div>
         </div>

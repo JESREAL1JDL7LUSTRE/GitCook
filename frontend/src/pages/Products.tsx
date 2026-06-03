@@ -19,7 +19,7 @@ const Products = () => {
   // Get page number from URL, default to 1
   const page = parseInt(searchParams.get("page") || "1", 10);
   const searchQuery = searchParams.get("search") || "";
-  const { data, isLoading:loading, error } = useQueryDishes(page, searchQuery);
+  const { data, isFetching: loading, error } = useQueryDishes(page, searchQuery);
   const filteredDishes = Array.isArray(data?.dishes) ? data.dishes : [];
   const totalPages = data?.totalPages ?? 1;
 
@@ -90,13 +90,45 @@ const Products = () => {
       className="container mx-auto px-4 py-4"
       id="menu-section"
     >
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-3xl font-bold text-center mb-6 text-gray-800"
-      >
-        Our <span className="text-[#a0c878]">Menu</span>
-      </motion.h2>
+      <div className="text-center mb-8">
+        <motion.span 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-food-orange font-outfit font-semibold tracking-wider uppercase text-sm mb-3 block"
+        >
+          Discover
+        </motion.span>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-heading font-bold text-food-dark"
+        >
+          Our <span className="text-food-emerald">Menu</span>
+        </motion.h2>
+        <div className="w-24 h-1 bg-food-orange/30 mx-auto mt-6 rounded-full" />
+      </div>
+
+      {/* Active Search Indicator */}
+      {searchQuery && (
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-4 flex items-center justify-between py-2"
+        >
+          <div className="flex items-center gap-2">
+            <span className="text-gray-500 font-medium">Showing results for:</span>
+            <span className="text-[#a0c878] font-bold px-1 py-1 rounded-full">
+              "{searchQuery}"
+            </span>
+          </div>
+          <button 
+            onClick={() => setSearchParams({})}
+            className="text-sm font-medium text-gray-500 hover:text-red-500 transition-colors"
+          >
+            Clear Filter
+          </button>
+        </motion.div>
+      )}
 
       {/* Dishes Grid */}
       <motion.div

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import useQueryPayment from "@/utils/Hooks/Tanstack/Payment/useQueryPayment";
 import useMutationPayment from "@/utils/Hooks/Tanstack/Payment/useMutationPayment";
+import { SuccessModal } from "./SuccessModal";
 
 
 interface DishDetails {
@@ -24,6 +25,7 @@ function PayUnpaidOrderForm({ order, dishDetails, isOpen, onClose }: PayUnpaidOr
   const {useFetchPaymentMethods} = useQueryPayment();
   const useMutationPaymentPost = useMutationPayment();
   const [paymentMethod, setPaymentMethod] = useState("Card");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { mutate: postPayment, isPending: postLoading, error: postError } = useMutationPaymentPost();
   const { data: paymentMethods, isLoading: methodsLoading, error: fetchError } = useFetchPaymentMethods();
   const nav = useNavigate();
@@ -35,13 +37,27 @@ function PayUnpaidOrderForm({ order, dishDetails, isOpen, onClose }: PayUnpaidOr
         payment_method: paymentMethod,
         amount: parseFloat(order.total_price.toFixed(2)),
       });
-      onClose();
-      nav(0);
+      setShowSuccessModal(true);
     } catch (err) {
       console.error("Payment Error:", err);
       alert("Payment failed. Please try again.");
     }
   };
+
+  if (showSuccessModal) {
+    return (
+      <SuccessModal
+        isOpen={true}
+        onClose={() => {
+          setShowSuccessModal(false);
+          onClose();
+          nav(0);
+        }}
+        title="Payment Successful!"
+        description="Thank you for your purchase. Your order has been successfully processed."
+      />
+    );
+  }
 
   return (
     <AlertDialog open={isOpen} onOpenChange={onClose}>

@@ -3,15 +3,14 @@ import { useParams, useNavigate } from "react-router-dom";
 import ProductDetailsCard from "../components/Cards/ProductDetailsCard";
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
-import useFetchDishes from "@/utils/Hooks/Tanstack/Dish/useInfiniteQueryDish";
+import useQuerySingleDish from "@/utils/Hooks/Tanstack/Dish/useQuerySingleDish";
 
 
 
 const ProductDetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { data: dishes, isLoading:loading, error } = useFetchDishes();
-
+    const { data: dish, isLoading: loading, error } = useQuerySingleDish(Number(id));
 useEffect(() => {
     // Scroll to top when the component mounts or when `id` changes
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -51,7 +50,7 @@ useEffect(() => {
         );
     }
 
-    const dish = dishes?.pages.flatMap(page => page.results).find((d) => d.id === Number(id));
+    // dish is fetched directly now
 
     if (!dish) {
         return (
@@ -79,7 +78,7 @@ useEffect(() => {
             animate={{ opacity: 1 }}
             className="flex justify-center min-h-screen bg-gradient-to-b from-white to-[#f5f5f7]"
         >
-            <ProductDetailsCard dish={{ ...dish, category_name: [dish.category_name] }} onBack={() => navigate(-1)} />
+            <ProductDetailsCard dish={{ ...dish, category_name: Array.isArray(dish.category_name) ? dish.category_name : (typeof dish.category_name === 'string' ? dish.category_name.split(',').map((c: string) => c.trim()) : []) }} onBack={() => navigate(-1)} />
         </motion.div>
     );
 };

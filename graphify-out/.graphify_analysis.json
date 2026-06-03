@@ -1,0 +1,1776 @@
+{
+  "communities": {
+    "0": [
+      "api_api",
+      "api_api_api",
+      "api_api_getcart",
+      "api_cartapi",
+      "api_cartapi_addtocartapi",
+      "api_cartapi_deletecartapi",
+      "api_cartapi_getcart",
+      "api_cartapi_updatecartitemapi",
+      "api_constant",
+      "api_dishapi",
+      "api_dishapi_getcategories",
+      "api_dishapi_getdishbyid",
+      "api_dishapi_getdishes",
+      "api_dishapi_postreview",
+      "api_orderapi",
+      "api_orderapi_createorder",
+      "api_orderapi_deleteorder",
+      "api_orderapi_getorders",
+      "api_paymentapi",
+      "api_paymentapi_getpayments",
+      "api_paymentapi_postpayment",
+      "api_profileapi",
+      "api_profileapi_getprofileb",
+      "api_profileapi_updateprofile",
+      "components_protectedroute",
+      "contents_featured",
+      "dish_usequerycategory",
+      "dish_usequerycategory_usefetchcategory",
+      "dish_usequerydish",
+      "dish_usequerydish_usequerydishes",
+      "dish_usequerysingledish",
+      "order_usemutationorder",
+      "order_usemutationorder_useordermutations",
+      "order_usequeryorder",
+      "pages_previousorders",
+      "pages_products_products",
+      "pages_profile_profile",
+      "pages_wishlist",
+      "payment_usemutationpayment",
+      "payment_usequerypayment",
+      "profile_usemutateprofile",
+      "profile_usemutateprofile_usepostprofile",
+      "profile_usequeryprofile",
+      "profile_usequeryprofile_usefetchprofile",
+      "review_usemutatereview",
+      "review_usemutatereview_usepostreview",
+      "store_views_get_payment_methods",
+      "types_types",
+      "types_types_cartitem",
+      "types_types_categoryitem",
+      "types_types_dish",
+      "types_types_dishorder",
+      "types_types_order",
+      "types_types_ordereditem",
+      "types_types_paymentdata",
+      "types_types_paymentitem",
+      "types_types_paymentmethod",
+      "types_types_profiledata",
+      "types_types_reviewdata",
+      "wishlist_usemutationcart",
+      "wishlist_usequerycart"
+    ],
+    "1": [
+      "abstractuser",
+      "accounts_admin",
+      "accounts_admin_customeradmin",
+      "accounts_admin_customeradmin_image_display",
+      "accounts_models",
+      "accounts_models_customer",
+      "accounts_models_customer_str",
+      "accounts_serializers",
+      "accounts_serializers_customerserializer",
+      "accounts_serializers_customerserializer_create",
+      "accounts_serializers_customerserializer_get_image",
+      "accounts_serializers_customertokenobtainserializer",
+      "accounts_serializers_customertokenobtainserializer_validate",
+      "accounts_serializers_meta",
+      "accounts_serializers_rationale_33",
+      "accounts_urls",
+      "accounts_views",
+      "accounts_views_changepasswordview_post",
+      "accounts_views_customerprofileview",
+      "accounts_views_customerprofileview_get_object",
+      "accounts_views_customertokenobtainview",
+      "accounts_views_customerviewset",
+      "accounts_views_customerviewset_get_permissions",
+      "accounts_views_rationale_23",
+      "accounts_views_resetpassworddirectlyview",
+      "apiview",
+      "store_admin",
+      "store_admin_cartadmin",
+      "store_admin_categoryadmin",
+      "store_admin_dishadmin",
+      "store_admin_meta",
+      "store_admin_orderadmin",
+      "store_admin_ordereditemadmin",
+      "store_admin_paymentadmin",
+      "store_admin_paymentform",
+      "store_admin_paymentform_save",
+      "store_admin_reviewsadmin",
+      "store_models",
+      "store_models_cart",
+      "store_models_category",
+      "store_models_dish",
+      "store_models_dish_str",
+      "store_models_meta",
+      "store_models_order",
+      "store_models_order_update_status_from_payments",
+      "store_models_order_update_total_price",
+      "store_models_ordereditem",
+      "store_models_ordereditem_delete",
+      "store_models_payment",
+      "store_models_payment_save",
+      "store_models_rationale_62",
+      "store_models_reviews",
+      "tokenviewbase",
+      "useradmin"
+    ],
+    "2": [
+      "jquery_jquery_min",
+      "jquery_jquery_min_a",
+      "jquery_jquery_min_ae",
+      "jquery_jquery_min_at",
+      "jquery_jquery_min_b",
+      "jquery_jquery_min_be",
+      "jquery_jquery_min_c",
+      "jquery_jquery_min_ct",
+      "jquery_jquery_min_dt",
+      "jquery_jquery_min_e",
+      "jquery_jquery_min_ee",
+      "jquery_jquery_min_f",
+      "jquery_jquery_min_fe",
+      "jquery_jquery_min_g",
+      "jquery_jquery_min_ge",
+      "jquery_jquery_min_gt",
+      "jquery_jquery_min_he",
+      "jquery_jquery_min_ht",
+      "jquery_jquery_min_i",
+      "jquery_jquery_min_ie",
+      "jquery_jquery_min_it",
+      "jquery_jquery_min_j",
+      "jquery_jquery_min_k",
+      "jquery_jquery_min_kt",
+      "jquery_jquery_min_l",
+      "jquery_jquery_min_le",
+      "jquery_jquery_min_m",
+      "jquery_jquery_min_n",
+      "jquery_jquery_min_ne",
+      "jquery_jquery_min_o",
+      "jquery_jquery_min_ot",
+      "jquery_jquery_min_p",
+      "jquery_jquery_min_pt",
+      "jquery_jquery_min_q",
+      "jquery_jquery_min_qe",
+      "jquery_jquery_min_re",
+      "jquery_jquery_min_rt",
+      "jquery_jquery_min_se",
+      "jquery_jquery_min_t",
+      "jquery_jquery_min_te",
+      "jquery_jquery_min_tt",
+      "jquery_jquery_min_u",
+      "jquery_jquery_min_ut",
+      "jquery_jquery_min_v",
+      "jquery_jquery_min_vt",
+      "jquery_jquery_min_w",
+      "jquery_jquery_min_we",
+      "jquery_jquery_min_x",
+      "jquery_jquery_min_y",
+      "jquery_jquery_min_ye",
+      "jquery_jquery_min_yt",
+      "jquery_jquery_min_z",
+      "jquery_jquery_min_ze",
+      "js_highlight_pack_h"
+    ],
+    "3": [
+      "js_jquery_3_7_1_min",
+      "js_jquery_3_7_1_min_a",
+      "js_jquery_3_7_1_min_ae",
+      "js_jquery_3_7_1_min_at",
+      "js_jquery_3_7_1_min_b",
+      "js_jquery_3_7_1_min_be",
+      "js_jquery_3_7_1_min_c",
+      "js_jquery_3_7_1_min_ct",
+      "js_jquery_3_7_1_min_dt",
+      "js_jquery_3_7_1_min_e",
+      "js_jquery_3_7_1_min_ee",
+      "js_jquery_3_7_1_min_f",
+      "js_jquery_3_7_1_min_fe",
+      "js_jquery_3_7_1_min_g",
+      "js_jquery_3_7_1_min_ge",
+      "js_jquery_3_7_1_min_gt",
+      "js_jquery_3_7_1_min_he",
+      "js_jquery_3_7_1_min_ht",
+      "js_jquery_3_7_1_min_i",
+      "js_jquery_3_7_1_min_ie",
+      "js_jquery_3_7_1_min_it",
+      "js_jquery_3_7_1_min_j",
+      "js_jquery_3_7_1_min_k",
+      "js_jquery_3_7_1_min_kt",
+      "js_jquery_3_7_1_min_l",
+      "js_jquery_3_7_1_min_le",
+      "js_jquery_3_7_1_min_m",
+      "js_jquery_3_7_1_min_n",
+      "js_jquery_3_7_1_min_ne",
+      "js_jquery_3_7_1_min_o",
+      "js_jquery_3_7_1_min_ot",
+      "js_jquery_3_7_1_min_p",
+      "js_jquery_3_7_1_min_pt",
+      "js_jquery_3_7_1_min_q",
+      "js_jquery_3_7_1_min_qe",
+      "js_jquery_3_7_1_min_re",
+      "js_jquery_3_7_1_min_rt",
+      "js_jquery_3_7_1_min_se",
+      "js_jquery_3_7_1_min_t",
+      "js_jquery_3_7_1_min_te",
+      "js_jquery_3_7_1_min_tt",
+      "js_jquery_3_7_1_min_u",
+      "js_jquery_3_7_1_min_ut",
+      "js_jquery_3_7_1_min_v",
+      "js_jquery_3_7_1_min_vt",
+      "js_jquery_3_7_1_min_w",
+      "js_jquery_3_7_1_min_we",
+      "js_jquery_3_7_1_min_x",
+      "js_jquery_3_7_1_min_y",
+      "js_jquery_3_7_1_min_ye",
+      "js_jquery_3_7_1_min_yt",
+      "js_jquery_3_7_1_min_z",
+      "js_jquery_3_7_1_min_ze"
+    ],
+    "4": [
+      "select2_select2_full",
+      "select2_select2_full_ajaxadapter",
+      "select2_select2_full_allowclear",
+      "select2_select2_full_arrayadapter",
+      "select2_select2_full_attachbody",
+      "select2_select2_full_attachcontainer",
+      "select2_select2_full_baseadapter",
+      "select2_select2_full_baseconstructor",
+      "select2_select2_full_baseselection",
+      "select2_select2_full_closeonselect",
+      "select2_select2_full_containeradapter",
+      "select2_select2_full_containercss",
+      "select2_select2_full_countresults",
+      "select2_select2_full_ctr",
+      "select2_select2_full_decoratedclass",
+      "select2_select2_full_defaults",
+      "select2_select2_full_dropdown",
+      "select2_select2_full_dropdownadapter",
+      "select2_select2_full_dropdowncss",
+      "select2_select2_full_eventrelay",
+      "select2_select2_full_getmethods",
+      "select2_select2_full_getselected",
+      "select2_select2_full_hideplaceholder",
+      "select2_select2_full_infinitescroll",
+      "select2_select2_full_initselection",
+      "select2_select2_full_inputdata",
+      "select2_select2_full_makeconfig",
+      "select2_select2_full_makeload",
+      "select2_select2_full_makerequire",
+      "select2_select2_full_maximuminputlength",
+      "select2_select2_full_maximumselectionlength",
+      "select2_select2_full_minimuminputlength",
+      "select2_select2_full_minimumresultsforsearch",
+      "select2_select2_full_multipleselection",
+      "select2_select2_full_nulllowestdelta",
+      "select2_select2_full_oldmatcher",
+      "select2_select2_full_onlyitem",
+      "select2_select2_full_options",
+      "select2_select2_full_placeholder",
+      "select2_select2_full_query",
+      "select2_select2_full_request",
+      "select2_select2_full_results",
+      "select2_select2_full_search",
+      "select2_select2_full_selectadapter",
+      "select2_select2_full_selectonclose",
+      "select2_select2_full_singleselection",
+      "select2_select2_full_stoppropagation",
+      "select2_select2_full_synccssclasses",
+      "select2_select2_full_tags",
+      "select2_select2_full_tokenizer",
+      "select2_select2_full_translation",
+      "select2_select2_full_uppercaseletter",
+      "select2_select2_full_wrapper"
+    ],
+    "5": [
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_axios",
+      "frontend_package_dependencies_class_variance_authority",
+      "frontend_package_dependencies_clsx",
+      "frontend_package_dependencies_js_cookie",
+      "frontend_package_dependencies_jwt_decode",
+      "frontend_package_dependencies_lucide_react",
+      "frontend_package_dependencies_motion",
+      "frontend_package_dependencies_preline_layout_splitter",
+      "frontend_package_dependencies_radix_ui_react_alert_dialog",
+      "frontend_package_dependencies_radix_ui_react_aspect_ratio",
+      "frontend_package_dependencies_radix_ui_react_checkbox",
+      "frontend_package_dependencies_radix_ui_react_dropdown_menu",
+      "frontend_package_dependencies_radix_ui_react_label",
+      "frontend_package_dependencies_radix_ui_react_slot",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
+      "frontend_package_dependencies_tailwind_merge",
+      "frontend_package_dependencies_tailwindcss_animate",
+      "frontend_package_dependencies_tanstack_react_query",
+      "frontend_package_dependencies_zustand",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_autoprefixer",
+      "frontend_package_devdependencies_eslint",
+      "frontend_package_devdependencies_eslint_js",
+      "frontend_package_devdependencies_eslint_plugin_react_hooks",
+      "frontend_package_devdependencies_eslint_plugin_react_refresh",
+      "frontend_package_devdependencies_globals",
+      "frontend_package_devdependencies_postcss",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_types_js_cookie",
+      "frontend_package_devdependencies_types_node",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_typescript",
+      "frontend_package_devdependencies_typescript_eslint",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_lint",
+      "frontend_package_scripts_preview",
+      "frontend_package_type",
+      "frontend_package_version"
+    ],
+    "6": [
+      "js_coreapi_0_1_1",
+      "js_coreapi_0_1_1_basicauthentication",
+      "js_coreapi_0_1_1_body",
+      "js_coreapi_0_1_1_bufferclone",
+      "js_coreapi_0_1_1_classcallcheck",
+      "js_coreapi_0_1_1_client",
+      "js_coreapi_0_1_1_consumed",
+      "js_coreapi_0_1_1_corejsoncodec",
+      "js_coreapi_0_1_1_decode",
+      "js_coreapi_0_1_1_defineproperties",
+      "js_coreapi_0_1_1_errormessage",
+      "js_coreapi_0_1_1_extractprotocol",
+      "js_coreapi_0_1_1_filereaderready",
+      "js_coreapi_0_1_1_getarray",
+      "js_coreapi_0_1_1_getboolean",
+      "js_coreapi_0_1_1_getcontent",
+      "js_coreapi_0_1_1_getcookie",
+      "js_coreapi_0_1_1_getobject",
+      "js_coreapi_0_1_1_getstring",
+      "js_coreapi_0_1_1_headers",
+      "js_coreapi_0_1_1_httptransport",
+      "js_coreapi_0_1_1_inherits",
+      "js_coreapi_0_1_1_iteratorfor",
+      "js_coreapi_0_1_1_jsoncodec",
+      "js_coreapi_0_1_1_linklookuperror",
+      "js_coreapi_0_1_1_lookuplink",
+      "js_coreapi_0_1_1_normalizemethod",
+      "js_coreapi_0_1_1_normalizename",
+      "js_coreapi_0_1_1_normalizevalue",
+      "js_coreapi_0_1_1_parametererror",
+      "js_coreapi_0_1_1_parseheaders",
+      "js_coreapi_0_1_1_possibleconstructorreturn",
+      "js_coreapi_0_1_1_primitivetonode",
+      "js_coreapi_0_1_1_querystring",
+      "js_coreapi_0_1_1_querystringify",
+      "js_coreapi_0_1_1_readblobasarraybuffer",
+      "js_coreapi_0_1_1_readblobastext",
+      "js_coreapi_0_1_1_request",
+      "js_coreapi_0_1_1_resolve",
+      "js_coreapi_0_1_1_response",
+      "js_coreapi_0_1_1_s",
+      "js_coreapi_0_1_1_sessionauthentication",
+      "js_coreapi_0_1_1_textcodec",
+      "js_coreapi_0_1_1_tokenauthentication",
+      "js_coreapi_0_1_1_trim",
+      "js_coreapi_0_1_1_unescapekey",
+      "js_coreapi_0_1_1_url",
+      "js_coreapi_0_1_1_urltemplate"
+    ],
+    "7": [
+      "jquery_jquery",
+      "jquery_jquery_addgethookif",
+      "jquery_jquery_addtoprefiltersortransports",
+      "jquery_jquery_adjustcss",
+      "jquery_jquery_ajaxextend",
+      "jquery_jquery_classestoarray",
+      "jquery_jquery_completed",
+      "jquery_jquery_computestyletests",
+      "jquery_jquery_createcache",
+      "jquery_jquery_createdisabledpseudo",
+      "jquery_jquery_createoptions",
+      "jquery_jquery_data",
+      "jquery_jquery_dataattr",
+      "jquery_jquery_disablescript",
+      "jquery_jquery_fcamelcase",
+      "jquery_jquery_fcssescape",
+      "jquery_jquery_finalpropname",
+      "jquery_jquery_fixinput",
+      "jquery_jquery_focusmappedhandler",
+      "jquery_jquery_genfx",
+      "jquery_jquery_getclass",
+      "jquery_jquery_getdata",
+      "jquery_jquery_identity",
+      "jquery_jquery_inspectprefiltersortransports",
+      "jquery_jquery_leveragenative",
+      "jquery_jquery_on",
+      "jquery_jquery_resolve",
+      "jquery_jquery_restorescript",
+      "jquery_jquery_returnfalse",
+      "jquery_jquery_returntrue",
+      "jquery_jquery_roundpixelmeasures",
+      "jquery_jquery_safeactiveelement",
+      "jquery_jquery_schedule",
+      "jquery_jquery_setfilters",
+      "jquery_jquery_setpositivenumber",
+      "jquery_jquery_sibling",
+      "jquery_jquery_stripandcollapse",
+      "jquery_jquery_thrower",
+      "jquery_jquery_vendorpropname",
+      "jquery_jquery_winnow"
+    ],
+    "8": [
+      "xregexp_xregexp",
+      "xregexp_xregexp_addmatch",
+      "xregexp_xregexp_arrayliketoarray",
+      "xregexp_xregexp_arraywithholes",
+      "xregexp_xregexp_augment",
+      "xregexp_xregexp_buildastral",
+      "xregexp_xregexp_cacheastral",
+      "xregexp_xregexp_cacheinvertedbmp",
+      "xregexp_xregexp_charcode",
+      "xregexp_xregexp_clipduplicates",
+      "xregexp_xregexp_copyregex",
+      "xregexp_xregexp_createforofiteratorhelper",
+      "xregexp_xregexp_dec",
+      "xregexp_xregexp_f",
+      "xregexp_xregexp_getcontextualtokenseparator",
+      "xregexp_xregexp_getnativeflags",
+      "xregexp_xregexp_hasnamedcapture",
+      "xregexp_xregexp_hasnativeflag",
+      "xregexp_xregexp_hex",
+      "xregexp_xregexp_interoprequiredefault",
+      "xregexp_xregexp_invertbmp",
+      "xregexp_xregexp_isquantifiernext",
+      "xregexp_xregexp_istype",
+      "xregexp_xregexp_iterabletoarraylimit",
+      "xregexp_xregexp_noniterablerest",
+      "xregexp_xregexp_normalize",
+      "xregexp_xregexp_nullthrows",
+      "xregexp_xregexp_pad4",
+      "xregexp_xregexp_prepareflags",
+      "xregexp_xregexp_prepareoptions",
+      "xregexp_xregexp_r",
+      "xregexp_xregexp_registerflag",
+      "xregexp_xregexp_replacer",
+      "xregexp_xregexp_rewrite",
+      "xregexp_xregexp_runtokens",
+      "xregexp_xregexp_setastral",
+      "xregexp_xregexp_setnamespacing",
+      "xregexp_xregexp_slicedtoarray",
+      "xregexp_xregexp_unsupportediterabletoarray",
+      "xregexp_xregexp_xregexp"
+    ],
+    "9": [
+      "pagenumberpagination",
+      "store_serializers",
+      "store_serializers_cartserializers",
+      "store_serializers_cartserializers_get_dish_data",
+      "store_serializers_categoryserializers",
+      "store_serializers_dishserializers",
+      "store_serializers_dishserializers_get_category_name",
+      "store_serializers_meta",
+      "store_serializers_ordereditemserializers",
+      "store_serializers_orderserializers",
+      "store_serializers_paymentserializers",
+      "store_serializers_paymentserializers_to_representation",
+      "store_serializers_reviewserializers",
+      "store_serializers_reviewserializers_create",
+      "store_serializers_reviewserializers_get_customer_email",
+      "store_urls",
+      "store_views",
+      "store_views_cartviewset",
+      "store_views_cartviewset_get_queryset",
+      "store_views_cartviewset_perform_create",
+      "store_views_cartviewset_update",
+      "store_views_categoryviewset",
+      "store_views_custompagination",
+      "store_views_dishviewset",
+      "store_views_dishviewset_get_serializer_context",
+      "store_views_get_reviews_by_dish",
+      "store_views_orderlistcreateviewset",
+      "store_views_orderlistcreateviewset_create",
+      "store_views_orderlistcreateviewset_perform_destroy",
+      "store_views_paymentlistcreateviewset",
+      "store_views_reviewviewset"
+    ],
+    "10": [
+      "xregexp_xregexp_min",
+      "xregexp_xregexp_min_addmatch",
+      "xregexp_xregexp_min_arrayliketoarray",
+      "xregexp_xregexp_min_augment",
+      "xregexp_xregexp_min_cacheastral",
+      "xregexp_xregexp_min_cacheinvertedbmp",
+      "xregexp_xregexp_min_charcode",
+      "xregexp_xregexp_min_clipduplicates",
+      "xregexp_xregexp_min_copyregex",
+      "xregexp_xregexp_min_createforofiteratorhelper",
+      "xregexp_xregexp_min_dec",
+      "xregexp_xregexp_min_f",
+      "xregexp_xregexp_min_getcontextualtokenseparator",
+      "xregexp_xregexp_min_hasnativeflag",
+      "xregexp_xregexp_min_hex",
+      "xregexp_xregexp_min_istype",
+      "xregexp_xregexp_min_normalize",
+      "xregexp_xregexp_min_nullthrows",
+      "xregexp_xregexp_min_o",
+      "xregexp_xregexp_min_pad4",
+      "xregexp_xregexp_min_prepareoptions",
+      "xregexp_xregexp_min_registerflag",
+      "xregexp_xregexp_min_replacer",
+      "xregexp_xregexp_min_rewrite",
+      "xregexp_xregexp_min_runtokens",
+      "xregexp_xregexp_min_setastral",
+      "xregexp_xregexp_min_setnamespacing",
+      "xregexp_xregexp_min_xregexp"
+    ],
+    "11": [
+      "api_dishapi_getreviews",
+      "buttons_wishlistbutton",
+      "buttons_wishlistbutton_wishlistbuttonprops",
+      "cards_productcard",
+      "cards_productcard_productcardprops",
+      "cards_productdetailscard_productdetailsprops",
+      "cards_wishlistcard",
+      "cards_wishlistcard_wishlistcardprops",
+      "pages_productdetails",
+      "pages_signin",
+      "pages_signin_signin",
+      "pages_signin_signinform",
+      "review_usequeryreview",
+      "review_usequeryreview_usefetchreviews",
+      "reviews_reviewsfordish_reviewsfordish",
+      "reviews_starratingshow",
+      "reviews_starratingshow_starratingshowprops",
+      "types_types_reviewsitem",
+      "ui_card",
+      "ui_card_card",
+      "ui_card_cardcontent",
+      "ui_card_carddescription",
+      "ui_card_cardfooter",
+      "ui_card_cardheader",
+      "ui_card_cardtitle"
+    ],
+    "12": [
+      "dropdowns_categorydropdown",
+      "navbar_desktopnav",
+      "navbar_desktopnav_desktopnavprops",
+      "navbar_mobilenav",
+      "navbar_navbar",
+      "navbar_navbar_navbar",
+      "navbar_navbar_navbarprops",
+      "navbar_searchfunction",
+      "navbar_searchfunction_searchfunction",
+      "navbar_searchfunction_searchprops",
+      "ui_dropdown_menu",
+      "ui_dropdown_menu_dropdownmenucheckboxitem",
+      "ui_dropdown_menu_dropdownmenucontent",
+      "ui_dropdown_menu_dropdownmenuitem",
+      "ui_dropdown_menu_dropdownmenulabel",
+      "ui_dropdown_menu_dropdownmenuradioitem",
+      "ui_dropdown_menu_dropdownmenuseparator",
+      "ui_dropdown_menu_dropdownmenushortcut",
+      "ui_dropdown_menu_dropdownmenusubcontent",
+      "ui_dropdown_menu_dropdownmenusubtrigger",
+      "user_issigninornot",
+      "user_issigninornot_isloggedin",
+      "user_issigninornot_refreshtoken",
+      "user_signout",
+      "user_signout_signout"
+    ],
+    "13": [
+      "cards_orderhistorycard",
+      "cards_orderhistorycard_ordereditem",
+      "cards_orderhistorycard_orderprops",
+      "cards_orderhistorycard_payment",
+      "contents_sidecart",
+      "deletebuttons_cartdelbutton",
+      "deletebuttons_cartdelbutton_cartdelbuttonprops",
+      "deletebuttons_orderdelbutton",
+      "deletebuttons_orderdelbutton_cartdelbuttonprops",
+      "popups_paymentpopupform",
+      "popups_payunpaidorderform",
+      "popups_payunpaidorderform_dishdetails",
+      "reviews_addreview",
+      "reviews_addreview_addreviewprops",
+      "reviews_reviewsfordish",
+      "ui_alert_dialog",
+      "ui_alert_dialog_alertdialogaction",
+      "ui_alert_dialog_alertdialogcancel",
+      "ui_alert_dialog_alertdialogcontent",
+      "ui_alert_dialog_alertdialogdescription",
+      "ui_alert_dialog_alertdialogfooter",
+      "ui_alert_dialog_alertdialogheader",
+      "ui_alert_dialog_alertdialogoverlay",
+      "ui_alert_dialog_alertdialogtitle"
+    ],
+    "14": [
+      "frontend_tsconfig_app",
+      "frontend_tsconfig_app_compileroptions",
+      "frontend_tsconfig_app_compileroptions_allowimportingtsextensions",
+      "frontend_tsconfig_app_compileroptions_baseurl",
+      "frontend_tsconfig_app_compileroptions_isolatedmodules",
+      "frontend_tsconfig_app_compileroptions_jsx",
+      "frontend_tsconfig_app_compileroptions_lib",
+      "frontend_tsconfig_app_compileroptions_module",
+      "frontend_tsconfig_app_compileroptions_moduledetection",
+      "frontend_tsconfig_app_compileroptions_moduleresolution",
+      "frontend_tsconfig_app_compileroptions_noemit",
+      "frontend_tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "frontend_tsconfig_app_compileroptions_nouncheckedsideeffectimports",
+      "frontend_tsconfig_app_compileroptions_nounusedlocals",
+      "frontend_tsconfig_app_compileroptions_nounusedparameters",
+      "frontend_tsconfig_app_compileroptions_paths",
+      "frontend_tsconfig_app_compileroptions_skiplibcheck",
+      "frontend_tsconfig_app_compileroptions_strict",
+      "frontend_tsconfig_app_compileroptions_target",
+      "frontend_tsconfig_app_compileroptions_tsbuildinfofile",
+      "frontend_tsconfig_app_compileroptions_usedefineforclassfields",
+      "frontend_tsconfig_app_include",
+      "frontend_tsconfig_app_paths"
+    ],
+    "15": [
+      "jquery_jquery_addcombinator",
+      "jquery_jquery_assert",
+      "jquery_jquery_compile",
+      "jquery_jquery_condense",
+      "jquery_jquery_createpositionalpseudo",
+      "jquery_jquery_elementmatcher",
+      "jquery_jquery_find",
+      "jquery_jquery_markfunction",
+      "jquery_jquery_matcherfromgroupmatchers",
+      "jquery_jquery_matcherfromtokens",
+      "jquery_jquery_multiplecontexts",
+      "jquery_jquery_select",
+      "jquery_jquery_setdocument",
+      "jquery_jquery_setmatcher",
+      "jquery_jquery_testcontext",
+      "jquery_jquery_tokenize",
+      "jquery_jquery_toselector",
+      "select2_select2_full_matcher",
+      "select2_select2_full_stripdiacritics"
+    ],
+    "16": [
+      "frontend_components",
+      "frontend_components_aliases",
+      "frontend_components_aliases_components",
+      "frontend_components_aliases_hooks",
+      "frontend_components_aliases_lib",
+      "frontend_components_aliases_ui",
+      "frontend_components_aliases_utils",
+      "frontend_components_iconlibrary",
+      "frontend_components_rsc",
+      "frontend_components_schema",
+      "frontend_components_style",
+      "frontend_components_tailwind",
+      "frontend_components_tailwind_basecolor",
+      "frontend_components_tailwind_config",
+      "frontend_components_tailwind_css",
+      "frontend_components_tailwind_cssvariables",
+      "frontend_components_tailwind_prefix",
+      "frontend_components_tsx"
+    ],
+    "17": [
+      "frontend_tsconfig_node",
+      "frontend_tsconfig_node_compileroptions",
+      "frontend_tsconfig_node_compileroptions_allowimportingtsextensions",
+      "frontend_tsconfig_node_compileroptions_isolatedmodules",
+      "frontend_tsconfig_node_compileroptions_lib",
+      "frontend_tsconfig_node_compileroptions_module",
+      "frontend_tsconfig_node_compileroptions_moduledetection",
+      "frontend_tsconfig_node_compileroptions_moduleresolution",
+      "frontend_tsconfig_node_compileroptions_noemit",
+      "frontend_tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "frontend_tsconfig_node_compileroptions_nouncheckedsideeffectimports",
+      "frontend_tsconfig_node_compileroptions_nounusedlocals",
+      "frontend_tsconfig_node_compileroptions_nounusedparameters",
+      "frontend_tsconfig_node_compileroptions_skiplibcheck",
+      "frontend_tsconfig_node_compileroptions_strict",
+      "frontend_tsconfig_node_compileroptions_target",
+      "frontend_tsconfig_node_compileroptions_tsbuildinfofile",
+      "frontend_tsconfig_node_include"
+    ],
+    "18": [
+      "js_highlight_pack",
+      "js_highlight_pack_a",
+      "js_highlight_pack_b",
+      "js_highlight_pack_c",
+      "js_highlight_pack_d",
+      "js_highlight_pack_f",
+      "js_highlight_pack_g",
+      "js_highlight_pack_i",
+      "js_highlight_pack_l",
+      "js_highlight_pack_m",
+      "js_highlight_pack_n",
+      "js_highlight_pack_o",
+      "js_highlight_pack_p",
+      "js_highlight_pack_r",
+      "js_highlight_pack_s",
+      "js_highlight_pack_t",
+      "js_highlight_pack_u",
+      "js_highlight_pack_v"
+    ],
+    "19": [
+      "buttons_cartbutton",
+      "buttons_orderbutton",
+      "buttons_paymentbutton",
+      "buttons_paymentbutton_paymentbuttonprops",
+      "buttons_sidecartbutton_cartbuttonprops",
+      "contents_layout",
+      "contents_layout_layout2",
+      "contents_sidecart_sidecart",
+      "context_plantoordercontext",
+      "context_plantoordercontext_dish",
+      "context_plantoordercontext_plantoorderstate",
+      "context_plantoordercontext_useplantoorderstore",
+      "featureddish_component",
+      "lib_addtoorderwhenpayingstore",
+      "lib_addtoorderwhenpayingstore_orderstate",
+      "lib_addtoorderwhenpayingstore_useaddtoorderwhenpayingstore",
+      "plantoorderbutton_component"
+    ],
+    "20": [
+      "select2_select2_full_min",
+      "select2_select2_full_min_a",
+      "select2_select2_full_min_b",
+      "select2_select2_full_min_c",
+      "select2_select2_full_min_d",
+      "select2_select2_full_min_e",
+      "select2_select2_full_min_i",
+      "select2_select2_full_min_l",
+      "select2_select2_full_min_n",
+      "select2_select2_full_min_o",
+      "select2_select2_full_min_r",
+      "select2_select2_full_min_s",
+      "select2_select2_full_min_t",
+      "select2_select2_full_min_u",
+      "select2_select2_full_min_v",
+      "select2_select2_full_min_x",
+      "select2_select2_full_min_y"
+    ],
+    "21": [
+      "lib_utils",
+      "lib_utils_cn",
+      "pages_products",
+      "ui_button",
+      "ui_button_buttonprops",
+      "ui_button_buttonvariants",
+      "ui_checkbox",
+      "ui_label",
+      "ui_label_label",
+      "ui_label_labelvariants",
+      "ui_pagination",
+      "ui_pagination_paginationcontent",
+      "ui_pagination_paginationellipsis",
+      "ui_pagination_paginationitem",
+      "ui_pagination_paginationlinkprops",
+      "ui_pagination_paginationprevious"
+    ],
+    "22": [
+      "admin_relatedobjectlookups",
+      "admin_relatedobjectlookups_addpopupindex",
+      "admin_relatedobjectlookups_dismissaddrelatedobjectpopup",
+      "admin_relatedobjectlookups_dismisschangerelatedobjectpopup",
+      "admin_relatedobjectlookups_dismisschildpopups",
+      "admin_relatedobjectlookups_dismissdeleterelatedobjectpopup",
+      "admin_relatedobjectlookups_dismissrelatedlookuppopup",
+      "admin_relatedobjectlookups_removepopupindex",
+      "admin_relatedobjectlookups_setpopupindex",
+      "admin_relatedobjectlookups_showadminpopup",
+      "admin_relatedobjectlookups_showrelatedobjectlookuppopup",
+      "admin_relatedobjectlookups_showrelatedobjectpopup",
+      "admin_relatedobjectlookups_updaterelatedobjectlinks",
+      "admin_relatedobjectlookups_updaterelatedselectsoptions"
+    ],
+    "23": [
+      "api_changepassapi",
+      "pages_changepassword",
+      "pages_forgotpassword",
+      "pages_profile",
+      "pages_signup",
+      "pages_signup_signup",
+      "pages_signup_signupform",
+      "profile_usemutatechangepassword",
+      "profile_usemutatechangepassword_usepostchangepassword",
+      "profile_usemutateforgotpassword",
+      "profile_usemutateforgotpassword_usepostforgotpassword",
+      "ui_button_button",
+      "ui_input",
+      "ui_input_input"
+    ],
+    "24": [
+      "contents_footer",
+      "contents_footer_footer",
+      "pages_about",
+      "pages_about_about",
+      "pages_notfound",
+      "pages_notfound_notfound",
+      "pages_termsandcondition",
+      "src_app",
+      "src_app_app",
+      "src_layout",
+      "src_layout_layout",
+      "src_main",
+      "src_main_queryclient"
+    ],
+    "25": [
+      "migrations_0002_alter_payment_transaction_id",
+      "migrations_0002_alter_payment_transaction_id_migration",
+      "migrations_0003_alter_payment_transaction_id_migration",
+      "migrations_0004_alter_payment_transaction_id_migration",
+      "migrations_0005_alter_payment_transaction_id_migration",
+      "migrations_0006_alter_payment_transaction_id_migration",
+      "migrations_0007_alter_payment_transaction_id_migration",
+      "migrations_0011_alter_payment_transaction_id_migration",
+      "migrations_0013_alter_payment_transaction_id_migration",
+      "migrations_0014_alter_payment_transaction_id_migration",
+      "migrations_0015_alter_payment_transaction_id_migration",
+      "migrations_0016_alter_payment_transaction_id_migration"
+    ],
+    "26": [
+      "js_actions",
+      "js_actions_affectedcheckboxes",
+      "js_actions_checker",
+      "js_actions_clearacross",
+      "js_actions_hide",
+      "js_actions_ready",
+      "js_actions_reset",
+      "js_actions_show",
+      "js_actions_showclear",
+      "js_actions_showquestion",
+      "js_actions_updatecounter"
+    ],
+    "27": [
+      "jquery_jquery_buildfragment",
+      "jquery_jquery_buildparams",
+      "jquery_jquery_clonecopyevent",
+      "jquery_jquery_domeval",
+      "jquery_jquery_dommanip",
+      "jquery_jquery_getall",
+      "jquery_jquery_isarraylike",
+      "jquery_jquery_remove",
+      "jquery_jquery_setglobaleval",
+      "jquery_jquery_totype"
+    ],
+    "28": [
+      "js_prettify_min",
+      "js_prettify_min_b",
+      "js_prettify_min_c",
+      "js_prettify_min_d",
+      "js_prettify_min_e",
+      "js_prettify_min_k",
+      "js_prettify_min_l",
+      "js_prettify_min_m",
+      "js_prettify_min_u",
+      "js_prettify_min_x"
+    ],
+    "29": [
+      "jquery_jquery_adoptvalue",
+      "jquery_jquery_ajaxconvert",
+      "jquery_jquery_ajaxhandleresponses",
+      "jquery_jquery_createtween",
+      "jquery_jquery_defaultprefilter",
+      "jquery_jquery_done",
+      "jquery_jquery_getdefaultdisplay",
+      "jquery_jquery_showhide"
+    ],
+    "30": [
+      "js_bootstrap_min",
+      "js_bootstrap_min_e",
+      "js_bootstrap_min_i",
+      "js_bootstrap_min_l",
+      "js_bootstrap_min_n",
+      "js_bootstrap_min_r",
+      "js_bootstrap_min_s",
+      "js_bootstrap_min_u"
+    ],
+    "31": [
+      "frontend_tsconfig",
+      "frontend_tsconfig_compileroptions",
+      "frontend_tsconfig_compileroptions_baseurl",
+      "frontend_tsconfig_compileroptions_paths",
+      "frontend_tsconfig_files",
+      "frontend_tsconfig_paths",
+      "frontend_tsconfig_references"
+    ],
+    "32": [
+      "jquery_jquery_boxmodeladjustment",
+      "jquery_jquery_createbuttonpseudo",
+      "jquery_jquery_createinputpseudo",
+      "jquery_jquery_curcss",
+      "jquery_jquery_getwidthorheight",
+      "jquery_jquery_manipulationtarget",
+      "jquery_jquery_nodename"
+    ],
+    "33": [
+      "js_api",
+      "js_api_formentries",
+      "js_api_normalizehttpheader",
+      "js_api_normalizekeys",
+      "js_api_requestcallback",
+      "js_api_responsecallback"
+    ],
+    "34": [
+      "accounts_apps",
+      "accounts_apps_accountsconfig",
+      "appconfig",
+      "store_apps",
+      "store_apps_storeconfig"
+    ],
+    "35": [
+      "jquery_jquery_animation",
+      "jquery_jquery_camelcase",
+      "jquery_jquery_createfxnow",
+      "jquery_jquery_propfilter",
+      "jquery_jquery_tween"
+    ],
+    "36": [
+      "js_core",
+      "js_core_findposx",
+      "js_core_findposy",
+      "js_core_quickelement",
+      "js_core_removechildren"
+    ],
+    "37": [
+      "5177922_ad507ccfe07d491eba9ad48c0ea8e114_image",
+      "customers_directory",
+      "download_2_image",
+      "screenshot_2025_02_19_10_34_16_020_com_ss_android_ugc_trill_image"
+    ],
+    "38": [
+      "angel_png",
+      "authors_pic_directory",
+      "bea_png",
+      "jesreal_png"
+    ],
+    "39": [
+      "backend_django",
+      "frontend_vite",
+      "how_to_run_gitbite",
+      "requirements_txt"
+    ],
+    "40": [
+      "backend_vercel",
+      "backend_vercel_builds",
+      "backend_vercel_routes",
+      "backend_vercel_version"
+    ],
+    "41": [
+      "dish_useinfinitequerydish",
+      "dish_useinfinitequerydish_fetchdishes",
+      "pages_productdetails_productdetailpage",
+      "usefetchdishes_hook"
+    ],
+    "42": [
+      "js_ajax_form",
+      "js_ajax_form_capturesubmittingelement",
+      "js_ajax_form_doajaxsubmit",
+      "js_ajax_form_replacedocument"
+    ],
+    "43": [
+      "js_csrf",
+      "js_csrf_csrfsafemethod",
+      "js_csrf_getcookie",
+      "js_csrf_sameorigin"
+    ],
+    "44": [
+      "js_theme",
+      "js_theme_cycletheme",
+      "js_theme_inittheme",
+      "js_theme_settheme"
+    ],
+    "45": [
+      "admin_img_readme",
+      "font_awesome",
+      "icon_calendar_svg"
+    ],
+    "46": [
+      "backend_manage",
+      "backend_manage_main",
+      "backend_manage_rationale_8"
+    ],
+    "47": [
+      "core_asgi",
+      "core_asgi_rationale_1",
+      "core_wsgi"
+    ],
+    "48": [
+      "frontend_index",
+      "frontend_main",
+      "gitcook_logo"
+    ],
+    "49": [
+      "glyphicons_halflings_png",
+      "glyphicons_halflings_regular",
+      "glyphicons_halflings_white"
+    ],
+    "50": [
+      "js_calendar",
+      "js_calendar_calendar",
+      "js_calendar_calendarmonth"
+    ],
+    "51": [
+      "js_cancel",
+      "js_cancel_handleclick",
+      "js_cancel_ready"
+    ],
+    "52": [
+      "js_urlify",
+      "js_urlify_downcode",
+      "js_urlify_urlify"
+    ],
+    "53": [
+      "requirements_cloudinary",
+      "requirements_django",
+      "requirements_django_cloudinary_storage"
+    ],
+    "54": [
+      "requirements_djangorestframework",
+      "requirements_djangorestframework_simplejwt",
+      "requirements_pyjwt"
+    ],
+    "55": [
+      "reviews_starrating",
+      "reviews_starrating_starrating",
+      "reviews_starrating_starratingprops"
+    ],
+    "56": [
+      "1000033900_erfv4gf_jpg",
+      "1000033900_jpg"
+    ],
+    "57": [
+      "backend_accounts_migrations_0001_initial_py_migrations_0001_initial",
+      "backend_accounts_migrations_0001_initial_py_migrations_0001_initial_migration"
+    ],
+    "58": [
+      "backend_build",
+      "e_school_cs224_project_gitbite_backend_build_sh__entry"
+    ],
+    "59": [
+      "backend_store_migrations_0001_initial_py_migrations_0001_initial",
+      "backend_store_migrations_0001_initial_py_migrations_0001_initial_migration"
+    ],
+    "60": [
+      "core_settings",
+      "core_settings_rationale_1"
+    ],
+    "61": [
+      "core_urls",
+      "core_urls_rationale_1"
+    ],
+    "62": [
+      "frontend_vercel",
+      "frontend_vercel_rewrites"
+    ],
+    "63": [
+      "i18n_bs",
+      "i18n_bs_e"
+    ],
+    "64": [
+      "i18n_cs",
+      "i18n_cs_e"
+    ],
+    "65": [
+      "i18n_hr",
+      "i18n_hr_n"
+    ],
+    "66": [
+      "i18n_lt",
+      "i18n_lt_n"
+    ],
+    "67": [
+      "i18n_lv",
+      "i18n_lv_e"
+    ],
+    "68": [
+      "i18n_ru",
+      "i18n_ru_n"
+    ],
+    "69": [
+      "i18n_sr",
+      "i18n_sr_n"
+    ],
+    "70": [
+      "i18n_sr_cyrl",
+      "i18n_sr_cyrl_n"
+    ],
+    "71": [
+      "i18n_uk",
+      "i18n_uk_n"
+    ],
+    "72": [
+      "js_nav_sidebar",
+      "js_nav_sidebar_initsidebarquickfilter"
+    ],
+    "73": [
+      "js_selectbox",
+      "js_selectbox_get_hidden_node_count"
+    ],
+    "74": [
+      "logo_eaevaqy_logo",
+      "logo_logo"
+    ],
+    "75": [
+      "migrations_0002_remove_customer_customer_id",
+      "migrations_0002_remove_customer_customer_id_migration"
+    ],
+    "76": [
+      "migrations_0003_alter_customer_options_alter_customer_managers_and_more",
+      "migrations_0003_alter_customer_options_alter_customer_managers_and_more_migration"
+    ],
+    "77": [
+      "migrations_0008_alter_payment_amount_alter_payment_transaction_id_and_more",
+      "migrations_0008_alter_payment_amount_alter_payment_transaction_id_and_more_migration"
+    ],
+    "78": [
+      "migrations_0009_alter_payment_amount_alter_payment_transaction_id",
+      "migrations_0009_alter_payment_amount_alter_payment_transaction_id_migration"
+    ],
+    "79": [
+      "migrations_0010_alter_payment_payment_status_and_more",
+      "migrations_0010_alter_payment_payment_status_and_more_migration"
+    ],
+    "80": [
+      "migrations_0012_dish_featured_alter_dish_image_alter_payment_amount_and_more",
+      "migrations_0012_dish_featured_alter_dish_image_alter_payment_amount_and_more_migration"
+    ],
+    "81": [
+      "migrations_0014_alter_customer_image",
+      "migrations_0014_alter_customer_image_migration"
+    ],
+    "82": [
+      "select2_select2_full_calldep",
+      "select2_select2_full_hasprop"
+    ],
+    "83": [
+      "select2_select2_full_createandselect",
+      "select2_select2_full_select"
+    ],
+    "84": [
+      "select2_select2_full_handler",
+      "select2_select2_full_shouldadjustolddeltas"
+    ],
+    "85": [
+      "select2_select2_full_makenormalize",
+      "select2_select2_full_normalize"
+    ],
+    "86": [
+      "select2_select2_full_makerelparts",
+      "select2_select2_full_splitprefix"
+    ],
+    "87": [
+      "accounts_init"
+    ],
+    "88": [
+      "accounts_tests"
+    ],
+    "89": [
+      "admin_datetimeshortcuts"
+    ],
+    "90": [
+      "backend_accounts_migrations_init_py_migrations_init"
+    ],
+    "91": [
+      "backend_store_migrations_init_py_migrations_init"
+    ],
+    "92": [
+      "core_init"
+    ],
+    "93": [
+      "fontawesome_webfont"
+    ],
+    "94": [
+      "frontend_eslint_config"
+    ],
+    "95": [
+      "frontend_postcss_config"
+    ],
+    "96": [
+      "frontend_readme"
+    ],
+    "97": [
+      "frontend_tailwind_config"
+    ],
+    "98": [
+      "frontend_vite_config"
+    ],
+    "99": [
+      "i18n_af"
+    ],
+    "100": [
+      "i18n_ar"
+    ],
+    "101": [
+      "i18n_az"
+    ],
+    "102": [
+      "i18n_bg"
+    ],
+    "103": [
+      "i18n_bn"
+    ],
+    "104": [
+      "i18n_ca"
+    ],
+    "105": [
+      "i18n_da"
+    ],
+    "106": [
+      "i18n_de"
+    ],
+    "107": [
+      "i18n_dsb"
+    ],
+    "108": [
+      "i18n_el"
+    ],
+    "109": [
+      "i18n_en"
+    ],
+    "110": [
+      "i18n_es"
+    ],
+    "111": [
+      "i18n_et"
+    ],
+    "112": [
+      "i18n_eu"
+    ],
+    "113": [
+      "i18n_fa"
+    ],
+    "114": [
+      "i18n_fi"
+    ],
+    "115": [
+      "i18n_fr"
+    ],
+    "116": [
+      "i18n_gl"
+    ],
+    "117": [
+      "i18n_he"
+    ],
+    "118": [
+      "i18n_hi"
+    ],
+    "119": [
+      "i18n_hsb"
+    ],
+    "120": [
+      "i18n_hu"
+    ],
+    "121": [
+      "i18n_hy"
+    ],
+    "122": [
+      "i18n_id"
+    ],
+    "123": [
+      "i18n_is"
+    ],
+    "124": [
+      "i18n_it"
+    ],
+    "125": [
+      "i18n_ja"
+    ],
+    "126": [
+      "i18n_ka"
+    ],
+    "127": [
+      "i18n_km"
+    ],
+    "128": [
+      "i18n_ko"
+    ],
+    "129": [
+      "i18n_mk"
+    ],
+    "130": [
+      "i18n_ms"
+    ],
+    "131": [
+      "i18n_nb"
+    ],
+    "132": [
+      "i18n_ne"
+    ],
+    "133": [
+      "i18n_nl"
+    ],
+    "134": [
+      "i18n_pl"
+    ],
+    "135": [
+      "i18n_ps"
+    ],
+    "136": [
+      "i18n_pt"
+    ],
+    "137": [
+      "i18n_pt_br"
+    ],
+    "138": [
+      "i18n_ro"
+    ],
+    "139": [
+      "i18n_sk"
+    ],
+    "140": [
+      "i18n_sl"
+    ],
+    "141": [
+      "i18n_sq"
+    ],
+    "142": [
+      "i18n_sv"
+    ],
+    "143": [
+      "i18n_th"
+    ],
+    "144": [
+      "i18n_tk"
+    ],
+    "145": [
+      "i18n_tr"
+    ],
+    "146": [
+      "i18n_vi"
+    ],
+    "147": [
+      "i18n_zh_cn"
+    ],
+    "148": [
+      "i18n_zh_tw"
+    ],
+    "149": [
+      "jquery_license"
+    ],
+    "150": [
+      "js_autocomplete"
+    ],
+    "151": [
+      "js_change_form"
+    ],
+    "152": [
+      "js_default"
+    ],
+    "153": [
+      "js_filters"
+    ],
+    "154": [
+      "js_inlines"
+    ],
+    "155": [
+      "js_jquery_init"
+    ],
+    "156": [
+      "js_jquery_json_view_min"
+    ],
+    "157": [
+      "js_load_ajax_form"
+    ],
+    "158": [
+      "js_popup_response"
+    ],
+    "159": [
+      "js_prepopulate"
+    ],
+    "160": [
+      "js_prepopulate_init"
+    ],
+    "161": [
+      "js_selectfilter2"
+    ],
+    "162": [
+      "license_select2_md"
+    ],
+    "163": [
+      "logo_ezvrybl_png"
+    ],
+    "164": [
+      "logo_hjevtvm_png"
+    ],
+    "165": [
+      "pfp_jpg"
+    ],
+    "166": [
+      "requirements_asgiref"
+    ],
+    "167": [
+      "requirements_certifi"
+    ],
+    "168": [
+      "requirements_charset_normalizer"
+    ],
+    "169": [
+      "requirements_django_cors_headers"
+    ],
+    "170": [
+      "requirements_django_filter"
+    ],
+    "171": [
+      "requirements_idna"
+    ],
+    "172": [
+      "requirements_pillow"
+    ],
+    "173": [
+      "requirements_psycopg2_binary"
+    ],
+    "174": [
+      "requirements_python_dotenv"
+    ],
+    "175": [
+      "requirements_pytz"
+    ],
+    "176": [
+      "requirements_requests"
+    ],
+    "177": [
+      "requirements_six"
+    ],
+    "178": [
+      "requirements_sqlparse"
+    ],
+    "179": [
+      "requirements_tzdata"
+    ],
+    "180": [
+      "requirements_urllib3"
+    ],
+    "181": [
+      "requirements_whitenoise"
+    ],
+    "182": [
+      "rest_framework_grid"
+    ],
+    "183": [
+      "src_vite_env_d"
+    ],
+    "184": [
+      "store_init"
+    ],
+    "185": [
+      "store_tests"
+    ],
+    "186": [
+      "ui_aspect_ratio"
+    ],
+    "187": [
+      "xregexp_license"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06229508196721312,
+    "1": 0.1111111111111111,
+    "2": 0.06638714185883997,
+    "3": 0.06821480406386067,
+    "4": 0.03773584905660377,
+    "5": 0.041666666666666664,
+    "6": 0.07180851063829788,
+    "7": 0.05384615384615385,
+    "8": 0.07692307692307693,
+    "9": 0.08172043010752689,
+    "10": 0.10052910052910052,
+    "11": 0.16666666666666666,
+    "12": 0.11,
+    "13": 0.2536231884057971,
+    "14": 0.08695652173913043,
+    "15": 0.1695906432748538,
+    "16": 0.1111111111111111,
+    "17": 0.1111111111111111,
+    "18": 0.24183006535947713,
+    "19": 0.17647058823529413,
+    "20": 0.14705882352941177,
+    "21": 0.225,
+    "22": 0.24175824175824176,
+    "23": 0.27472527472527475,
+    "24": 0.16666666666666666,
+    "25": 0.16666666666666666,
+    "26": 0.38181818181818183,
+    "27": 0.24444444444444444,
+    "28": 0.3111111111111111,
+    "29": 0.25,
+    "30": 0.5357142857142857,
+    "31": 0.2857142857142857,
+    "32": 0.2857142857142857,
+    "33": 0.4,
+    "34": 0.4,
+    "35": 0.4,
+    "36": 0.4,
+    "37": 0.6666666666666666,
+    "38": 0.5,
+    "39": 0.6666666666666666,
+    "40": 0.5,
+    "41": 0.5,
+    "42": 0.6666666666666666,
+    "43": 0.5,
+    "44": 0.8333333333333334,
+    "45": 0.6666666666666666,
+    "46": 0.6666666666666666,
+    "47": 0.6666666666666666,
+    "48": 0.6666666666666666,
+    "49": 0.6666666666666666,
+    "50": 0.6666666666666666,
+    "51": 0.6666666666666666,
+    "52": 1.0,
+    "53": 0.6666666666666666,
+    "54": 0.6666666666666666,
+    "55": 0.6666666666666666,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0,
+    "114": 1.0,
+    "115": 1.0,
+    "116": 1.0,
+    "117": 1.0,
+    "118": 1.0,
+    "119": 1.0,
+    "120": 1.0,
+    "121": 1.0,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 1.0,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0,
+    "135": 1.0,
+    "136": 1.0,
+    "137": 1.0,
+    "138": 1.0,
+    "139": 1.0,
+    "140": 1.0,
+    "141": 1.0,
+    "142": 1.0,
+    "143": 1.0,
+    "144": 1.0,
+    "145": 1.0,
+    "146": 1.0,
+    "147": 1.0,
+    "148": 1.0,
+    "149": 1.0,
+    "150": 1.0,
+    "151": 1.0,
+    "152": 1.0,
+    "153": 1.0,
+    "154": 1.0,
+    "155": 1.0,
+    "156": 1.0,
+    "157": 1.0,
+    "158": 1.0,
+    "159": 1.0,
+    "160": 1.0,
+    "161": 1.0,
+    "162": 1.0,
+    "163": 1.0,
+    "164": 1.0,
+    "165": 1.0,
+    "166": 1.0,
+    "167": 1.0,
+    "168": 1.0,
+    "169": 1.0,
+    "170": 1.0,
+    "171": 1.0,
+    "172": 1.0,
+    "173": 1.0,
+    "174": 1.0,
+    "175": 1.0,
+    "176": 1.0,
+    "177": 1.0,
+    "178": 1.0,
+    "179": 1.0,
+    "180": 1.0,
+    "181": 1.0,
+    "182": 1.0,
+    "183": 1.0,
+    "184": 1.0,
+    "185": 1.0,
+    "186": 1.0,
+    "187": 1.0
+  },
+  "gods": [
+    {
+      "id": "accounts_models_customer",
+      "label": "Customer",
+      "degree": 20
+    },
+    {
+      "id": "frontend_tsconfig_app_compileroptions",
+      "label": "compilerOptions",
+      "degree": 20
+    },
+    {
+      "id": "ui_button_button",
+      "label": "Button",
+      "degree": 16
+    },
+    {
+      "id": "frontend_tsconfig_node_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "store_models_order",
+      "label": "Order",
+      "degree": 15
+    },
+    {
+      "id": "store_models_ordereditem",
+      "label": "OrderedItem",
+      "degree": 15
+    },
+    {
+      "id": "store_models_payment",
+      "label": "Payment",
+      "degree": 14
+    },
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "degree": 14
+    },
+    {
+      "id": "store_models_category",
+      "label": "Category",
+      "degree": 13
+    },
+    {
+      "id": "store_models_dish",
+      "label": "Dish",
+      "degree": 13
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Calendar Icon SVG",
+      "target": "Font Awesome",
+      "source_files": [
+        "backend/staticfiles/admin/img/icon-calendar.svg",
+        "backend/staticfiles/admin/img/README.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image)"
+    },
+    {
+      "source": "FeaturedDish Component",
+      "target": "useFetchDishes Hook",
+      "source_files": [
+        "frontend/src/components/FeaturedDish.txt",
+        "frontend/src/utils/Hooks/FetchHooks/useFetchDish2.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "crosses file types (doc \u2194 code); bridges separate communities"
+    },
+    {
+      "source": "Meta",
+      "target": "Customer",
+      "source_files": [
+        "backend/Store/models.py",
+        "backend/Accounts/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; peripheral node `Meta` unexpectedly reaches hub `Customer`"
+    },
+    {
+      "source": "I()",
+      "target": "h()",
+      "source_files": [
+        "backend/staticfiles/rest_framework/js/jquery-3.7.1.min.js",
+        "backend/staticfiles/rest_framework/docs/js/highlight.pack.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "DropdownMenuShortcut()",
+      "target": "cn()",
+      "source_files": [
+        "frontend/src/components/ui/dropdown-menu.tsx",
+        "frontend/src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities; peripheral node `DropdownMenuShortcut()` unexpectedly reaches hub `cn()`"
+    }
+  ],
+  "tokens": {
+    "input": 46511,
+    "output": 1674
+  }
+}

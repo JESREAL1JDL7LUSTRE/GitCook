@@ -21,6 +21,10 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    // Don't log 401s for the profile endpoint (it's expected for guests)
+    if (error.response?.status === 401 && error.config?.url === '/api/profile/') {
+      return Promise.reject(error);
+    }
     console.error(`Response error [${error.response?.status}]:`, error.response?.data);
     return Promise.reject(error);
   }

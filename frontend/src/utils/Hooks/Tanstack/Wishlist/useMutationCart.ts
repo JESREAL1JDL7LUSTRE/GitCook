@@ -2,10 +2,12 @@ import { addToCartApi, deleteCartApi } from "@/api/CartApi"
 import {useMutation, useQueryClient} from "@tanstack/react-query"
 const useMutationCart = () => {
     const useMutationCartAdd = () => {
+      const queryClient = useQueryClient();
         return useMutation ({
             mutationFn: ({dishId}: {dishId: number}) => addToCartApi(dishId),
             onSuccess(data){
-                console.log(`success ${data}`)
+                console.log(`success ${data}`);
+                queryClient.invalidateQueries({ queryKey: ['cart'] }); // Refresh the cart query
             }
         })
     }
