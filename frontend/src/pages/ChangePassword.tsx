@@ -4,15 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import usePostChangePassword from "@/utils/Hooks/Tanstack/Profile/useMutateChangePassword";
+import { SuccessModal } from "@/components/PopUps/SuccessModal";
+import { useNavigate } from "react-router-dom";
 
 const ChangePassword = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { mutate: changePassword, data: message } = usePostChangePassword();
+  const nav = useNavigate();
 
   const handleChangePassword = (e: React.FormEvent) => {
     e.preventDefault();
-    changePassword({ oldPassword, newPassword });
+    changePassword(
+      { oldPassword, newPassword },
+      {
+        onSuccess: () => setShowSuccessModal(true),
+      }
+    );
   };
 
   return (
@@ -79,6 +88,17 @@ const ChangePassword = () => {
           )}
         </CardContent>
       </Card>
+      {showSuccessModal && (
+        <SuccessModal
+          isOpen={true}
+          onClose={() => {
+            setShowSuccessModal(false);
+            nav("/profile");
+          }}
+          title="Password Changed!"
+          description="Your password has been successfully updated."
+        />
+      )}
     </motion.div>
   );
 }
