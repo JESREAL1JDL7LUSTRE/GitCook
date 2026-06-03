@@ -1,7 +1,6 @@
 import { ChevronLeft, ChevronRight, ShoppingBag } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PaymentButton from '../Buttons/PaymentButton';
 import { motion, AnimatePresence } from 'framer-motion';
 import useQueryDishes from '@/utils/Hooks/Tanstack/Dish/useQueryDish';
 

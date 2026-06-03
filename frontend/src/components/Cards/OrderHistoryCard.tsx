@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Clock, CreditCard, ChevronRight, ShoppingBag } from "lucide-react";
+import { CreditCard, ChevronRight, ShoppingBag } from "lucide-react";
 import OrderDelButton from "../Buttons/DeleteButtons/OrderDelButton";
 import PayUnpaidOrderForm from "../PopUps/PayUnpaidOrderForm";
 import { useNavigate } from "react-router-dom";
