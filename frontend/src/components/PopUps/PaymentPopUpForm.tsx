@@ -14,7 +14,7 @@ import { usePlanToOrderStore } from "./Context/PlanToOrderContext";
 import useQueryPayment from "@/utils/Hooks/Tanstack/Payment/useQueryPayment";
 import useMutationPayment from "@/utils/Hooks/Tanstack/Payment/useMutationPayment";
 import useOrderMutations from "@/utils/Hooks/Tanstack/Order/useMutationOrder";
-import { PaymentSuccessModal } from "./PaymentSuccessModal";
+import { SuccessModal } from "./SuccessModal";
 
 interface PaymentPopUpFormProps {
   isOpen: boolean;
@@ -66,9 +66,6 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
         payment_method: paymentMethod,
         amount: finalOrder.total_price,
       });
-
-      clearDishDetails();
-      clearPlanToOrder();
       setShowSuccessModal(true);
     } catch (err) {
       console.error("Payment Error:", err);
@@ -78,12 +75,17 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
 
   if (showSuccessModal) {
     return (
-      <PaymentSuccessModal
+      <SuccessModal
         isOpen={true}
         onClose={() => {
+          clearDishDetails();
+          clearPlanToOrder();
           setShowSuccessModal(false);
           onClose();
+          window.location.reload();
         }}
+        title="Payment Successful!"
+        description="Thank you for your purchase. Your order has been successfully processed."
       />
     );
   }

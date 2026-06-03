@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import useQueryPayment from "@/utils/Hooks/Tanstack/Payment/useQueryPayment";
 import useMutationPayment from "@/utils/Hooks/Tanstack/Payment/useMutationPayment";
-import { PaymentSuccessModal } from "./PaymentSuccessModal";
+import { SuccessModal } from "./SuccessModal";
 
 
 interface DishDetails {
@@ -46,13 +46,15 @@ function PayUnpaidOrderForm({ order, dishDetails, isOpen, onClose }: PayUnpaidOr
 
   if (showSuccessModal) {
     return (
-      <PaymentSuccessModal
+      <SuccessModal
         isOpen={true}
         onClose={() => {
           setShowSuccessModal(false);
           onClose();
           nav(0);
         }}
+        title="Payment Successful!"
+        description="Thank you for your purchase. Your order has been successfully processed."
       />
     );
   }

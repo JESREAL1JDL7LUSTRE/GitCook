@@ -11,33 +11,33 @@ const Wishlist = () => {
 
   if (loading) {
     return (
-        <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex items-center justify-center min-h-screen"
-        >
-            <Loader2 className="h-12 w-12 animate-spin text-[#a0c878]" />
-            <p className="ml-2 text-[#a0c878] font-medium">Loading wishlist...</p>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="flex items-center justify-center min-h-screen"
+      >
+        <Loader2 className="h-12 w-12 animate-spin text-[#a0c878]" />
+        <p className="ml-2 text-[#a0c878] font-medium">Loading wishlist...</p>
+      </motion.div>
     );
-}
+  }
   if (error) {
     return (
-        <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex items-center justify-center min-h-screen"
-        >
-            <div className="bg-white p-8 rounded-lg shadow-md border border-red-200">
-                <p className="text-red-600 font-medium">{error.message}</p>
-                <button 
-                    onClick={() => navigate(-1)} 
-                    className="mt-4 px-4 py-2 bg-[#a0c878] hover:bg-[#8fb86a] text-white rounded-md"
-                >
-                    Go Back
-                </button>
-            </div>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="flex items-center justify-center min-h-screen"
+      >
+        <div className="bg-white p-8 rounded-lg shadow-md border border-red-200">
+          <p className="text-red-600 font-medium">{error.message}</p>
+          <button
+            onClick={() => navigate(-1)}
+            className="mt-4 px-4 py-2 bg-[#a0c878] hover:bg-[#8fb86a] text-white rounded-md"
+          >
+            Go Back
+          </button>
+        </div>
+      </motion.div>
     );
   }
 
