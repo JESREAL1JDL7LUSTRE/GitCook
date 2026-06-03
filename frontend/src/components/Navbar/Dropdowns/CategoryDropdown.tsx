@@ -27,7 +27,10 @@ import { useNavigate } from "react-router-dom";
         <DropdownMenuContent id="category-dropdown">
           <DropdownMenuLabel>Select a Category</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => setSearchQuery("")}>
+          <DropdownMenuItem onClick={() => {
+            setSearchQuery("");
+            navigate("/");
+          }}>
             All
           </DropdownMenuItem>
           <DropdownMenuSeparator />
