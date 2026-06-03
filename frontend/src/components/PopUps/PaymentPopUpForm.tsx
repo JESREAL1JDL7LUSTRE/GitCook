@@ -14,6 +14,7 @@ import { usePlanToOrderStore } from "./Context/PlanToOrderContext";
 import useQueryPayment from "@/utils/Hooks/Tanstack/Payment/useQueryPayment";
 import useMutationPayment from "@/utils/Hooks/Tanstack/Payment/useMutationPayment";
 import useOrderMutations from "@/utils/Hooks/Tanstack/Order/useMutationOrder";
+import { SuccessModal } from "./SuccessModal";
 
 interface PaymentPopUpFormProps {
   isOpen: boolean;
@@ -28,6 +29,7 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
   const { dishDetails, clearDishDetails } = useAddToOrderWhenPayingStore(); // ✅ Get stored dishes
   const [order, setOrder] = useState<{ id: number; total_price: number } | null>(null);
   const [paymentMethod, setPaymentMethod] = useState("Card");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const clearPlanToOrder = usePlanToOrderStore((state) => state.clearPlanToOrder);
   const { mutate: PostPayment, isPending: postLoading, error: postError } = useMutationPaymentPost();
   const { data: paymentMethods, isLoading: methodsLoading, error: fetchError } = useFetchPaymentMethods();
@@ -64,15 +66,29 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
         payment_method: paymentMethod,
         amount: finalOrder.total_price,
       });
-
-      clearDishDetails();
-      clearPlanToOrder();
-      onClose();
+      setShowSuccessModal(true);
     } catch (err) {
       console.error("Payment Error:", err);
       alert("Payment failed. Please try again.");
     }
   };
+
+  if (showSuccessModal) {
+    return (
+      <SuccessModal
+        isOpen={true}
+        onClose={() => {
+          clearDishDetails();
+          clearPlanToOrder();
+          setShowSuccessModal(false);
+          onClose();
+          window.location.reload();
+        }}
+        title="Payment Successful!"
+        description="Thank you for your purchase. Your order has been successfully processed."
+      />
+    );
+  }
 
   return (
     <AlertDialog open={isOpen} onOpenChange={onClose}>
