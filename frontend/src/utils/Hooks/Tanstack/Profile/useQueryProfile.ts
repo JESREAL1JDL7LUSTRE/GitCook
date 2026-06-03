@@ -7,6 +7,11 @@ const useFetchProfile = () => {
     queryKey: ["profile"], // Unique key for caching
     queryFn: getProfileB, // Fetch function
     staleTime: 1000 * 60 * 5, // Cache data for 5 minutes to prevent unnecessary refetching
+    retry: (failureCount, error: any) => {
+      // Don't retry if it's a 401 Unauthorized (user is just a guest)
+      if (error.response?.status === 401) return false;
+      return failureCount < 3;
+    },
   });
 };
 

@@ -11,6 +11,7 @@ function Featured() {
   const featuredDishes = data?.dishes?.filter((dish) => dish.featured) || [];
 
   useEffect(() => {
+    if (featuredDishes.length === 0) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredDishes.length);
     }, 5000);
