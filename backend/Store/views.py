@@ -35,7 +35,7 @@ from rest_framework import filters
 class DishViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = DishSerializers
     permission_classes = [permissions.AllowAny]
-    queryset = Dish.objects.all()
+    queryset = Dish.objects.prefetch_related('category').all()
     pagination_class = CustomPagination
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'recipes', 'category__name', 'price']

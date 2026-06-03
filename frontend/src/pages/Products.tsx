@@ -19,7 +19,7 @@ const Products = () => {
   // Get page number from URL, default to 1
   const page = parseInt(searchParams.get("page") || "1", 10);
   const searchQuery = searchParams.get("search") || "";
-  const { data, isLoading:loading, error } = useQueryDishes(page, searchQuery);
+  const { data, isFetching: loading, error } = useQueryDishes(page, searchQuery);
   const filteredDishes = Array.isArray(data?.dishes) ? data.dishes : [];
   const totalPages = data?.totalPages ?? 1;
 
