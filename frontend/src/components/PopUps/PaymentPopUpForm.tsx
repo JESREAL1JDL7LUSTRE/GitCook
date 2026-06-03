@@ -14,6 +14,7 @@ import { usePlanToOrderStore } from "./Context/PlanToOrderContext";
 import useQueryPayment from "@/utils/Hooks/Tanstack/Payment/useQueryPayment";
 import useMutationPayment from "@/utils/Hooks/Tanstack/Payment/useMutationPayment";
 import useOrderMutations from "@/utils/Hooks/Tanstack/Order/useMutationOrder";
+import { PaymentSuccessModal } from "./PaymentSuccessModal";
 
 interface PaymentPopUpFormProps {
   isOpen: boolean;
@@ -28,6 +29,7 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
   const { dishDetails, clearDishDetails } = useAddToOrderWhenPayingStore(); // ✅ Get stored dishes
   const [order, setOrder] = useState<{ id: number; total_price: number } | null>(null);
   const [paymentMethod, setPaymentMethod] = useState("Card");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const clearPlanToOrder = usePlanToOrderStore((state) => state.clearPlanToOrder);
   const { mutate: PostPayment, isPending: postLoading, error: postError } = useMutationPaymentPost();
   const { data: paymentMethods, isLoading: methodsLoading, error: fetchError } = useFetchPaymentMethods();
@@ -67,12 +69,24 @@ function PaymentPopUpForm({ isOpen, onClose }: PaymentPopUpFormProps) {
 
       clearDishDetails();
       clearPlanToOrder();
-      onClose();
+      setShowSuccessModal(true);
     } catch (err) {
       console.error("Payment Error:", err);
       alert("Payment failed. Please try again.");
     }
   };
+
+  if (showSuccessModal) {
+    return (
+      <PaymentSuccessModal
+        isOpen={true}
+        onClose={() => {
+          setShowSuccessModal(false);
+          onClose();
+        }}
+      />
+    );
+  }
 
   return (
     <AlertDialog open={isOpen} onOpenChange={onClose}>
