@@ -29,6 +29,16 @@ export const getDishes = async (page: number, searchQuery: string) => {
     }
 };
 
+export const getDishById = async (id: number) => {
+    try {
+        const res = await api.get<Dish>(`/api/dish/${id}/`);
+        return res.data;
+    } catch (error) {
+        console.error(`❌ Error fetching dish ${id}:`, error);
+        throw error;
+    }
+};
+
 /**
  * Fetches reviews for a specific dish.
  * @param dish_id - The ID of the dish.
