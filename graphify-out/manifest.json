@@ -185,9 +185,9 @@
     "semantic_hash": "d73aa636c685bcdb861335c6cb8898ba"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\backend\\Store\\views.py": {
-    "mtime": 1740729872.3051293,
-    "ast_hash": "1f524a2df6fd91b7a50b7204d59d3012",
-    "semantic_hash": "1f524a2df6fd91b7a50b7204d59d3012"
+    "mtime": 1780463127.2294562,
+    "ast_hash": "63fc8906448050d6b01162710046de60",
+    "semantic_hash": "63fc8906448050d6b01162710046de60"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\backend\\build.sh": {
     "mtime": 1740987925.9189806,
@@ -205,9 +205,9 @@
     "semantic_hash": "fdea4aa3f7fc7480f33ed121b3bf2afc"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\backend\\core\\settings.py": {
-    "mtime": 1741070414.0649571,
-    "ast_hash": "50272e7741c555dbc81070976f553c3f",
-    "semantic_hash": "50272e7741c555dbc81070976f553c3f"
+    "mtime": 1780461626.6860733,
+    "ast_hash": "f883a20d116c0a8b4a6430e39832af29",
+    "semantic_hash": "f883a20d116c0a8b4a6430e39832af29"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\backend\\core\\urls.py": {
     "mtime": 1741067416.8296254,
@@ -745,9 +745,9 @@
     "semantic_hash": "546e49e756b549a5fbcd1321fc367983"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\api\\DishApi.ts": {
-    "mtime": 1741335842.602072,
-    "ast_hash": "109db70b3b02e07b08ae9cdb7245083b",
-    "semantic_hash": "109db70b3b02e07b08ae9cdb7245083b"
+    "mtime": 1780462615.4477694,
+    "ast_hash": "cab6e52ba9c1c6f21598b78de2e99e22",
+    "semantic_hash": "cab6e52ba9c1c6f21598b78de2e99e22"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\api\\OrderApi.ts": {
     "mtime": 1741272301.737439,
@@ -760,14 +760,14 @@
     "semantic_hash": "c83926805352e29e3ee66386c7109f42"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\api\\ProfileApi.ts": {
-    "mtime": 1741274042.67271,
-    "ast_hash": "16f41848501b35c6cfb40cdaf33aa4bb",
-    "semantic_hash": "16f41848501b35c6cfb40cdaf33aa4bb"
+    "mtime": 1780462237.5257626,
+    "ast_hash": "72fe8ff2956ef6323c2db809f543c7af",
+    "semantic_hash": "72fe8ff2956ef6323c2db809f543c7af"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\api\\api.ts": {
-    "mtime": 1741257980.062397,
-    "ast_hash": "4aa7a11a75d32b74a986214deb4b7158",
-    "semantic_hash": "4aa7a11a75d32b74a986214deb4b7158"
+    "mtime": 1780462223.3076532,
+    "ast_hash": "1eba5fb99185862c2c7e9a16182062f9",
+    "semantic_hash": "1eba5fb99185862c2c7e9a16182062f9"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\api\\constant.ts": {
     "mtime": 1739774187.4548626,
@@ -830,9 +830,9 @@
     "semantic_hash": "58ceda4189878fd10dabaaaf9bbc4ddc"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\components\\Contents\\Featured.tsx": {
-    "mtime": 1741332993.45998,
-    "ast_hash": "33717960eee098ad4d87e2f9d7cc525a",
-    "semantic_hash": "33717960eee098ad4d87e2f9d7cc525a"
+    "mtime": 1780462202.9410896,
+    "ast_hash": "092ea4318e2c0bcb18e753225c153d6a",
+    "semantic_hash": "092ea4318e2c0bcb18e753225c153d6a"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\components\\Contents\\Footer.tsx": {
     "mtime": 1741176352.2658625,
@@ -980,9 +980,9 @@
     "semantic_hash": "5a6fd53fdcf2be529e9cc0b718fde352"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\main.tsx": {
-    "mtime": 1741318254.368932,
-    "ast_hash": "45bf01c6bfb3dadb55aad50508a519d6",
-    "semantic_hash": "45bf01c6bfb3dadb55aad50508a519d6"
+    "mtime": 1780463013.8656049,
+    "ast_hash": "d87ce852bb899e1a495f53c69720c8a6",
+    "semantic_hash": "d87ce852bb899e1a495f53c69720c8a6"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\pages\\About.tsx": {
     "mtime": 1741228542.3860598,
@@ -1010,14 +1010,14 @@
     "semantic_hash": "9fff2b29022ee68a9e91fe85ba250708"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\pages\\ProductDetails.tsx": {
-    "mtime": 1741335676.9849153,
-    "ast_hash": "87c254818fad725e97abad0802728e1f",
-    "semantic_hash": "87c254818fad725e97abad0802728e1f"
+    "mtime": 1780462636.807063,
+    "ast_hash": "004b4dd6b4edfa893124b76f060500f8",
+    "semantic_hash": "004b4dd6b4edfa893124b76f060500f8"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\pages\\Products.tsx": {
-    "mtime": 1741333238.858984,
-    "ast_hash": "493fab4c92016d0a46822f4f5377da58",
-    "semantic_hash": "493fab4c92016d0a46822f4f5377da58"
+    "mtime": 1780463146.416996,
+    "ast_hash": "f08ae197be6a4ed5edfe7faf61782ba4",
+    "semantic_hash": "f08ae197be6a4ed5edfe7faf61782ba4"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\pages\\Profile.tsx": {
     "mtime": 1741336375.0508363,
@@ -1100,9 +1100,9 @@
     "semantic_hash": "b6fb0d7a318ae311fac6e36f68ec1143"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\utils\\Hooks\\Tanstack\\Profile\\useQueryProfile.ts": {
-    "mtime": 1741334193.7472036,
-    "ast_hash": "b7d5a65be36350fe0f90e84df3118d85",
-    "semantic_hash": "b7d5a65be36350fe0f90e84df3118d85"
+    "mtime": 1780462372.393225,
+    "ast_hash": "91cc800d58339fda9f130294e3b73845",
+    "semantic_hash": "91cc800d58339fda9f130294e3b73845"
   },
   "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\utils\\Hooks\\Tanstack\\Review\\useMutateReview.ts": {
     "mtime": 1741334730.116809,
@@ -1158,5 +1158,10 @@
     "mtime": 1741228559.8446586,
     "ast_hash": "3084db399433ffd16085288ffd7b910e",
     "semantic_hash": "3084db399433ffd16085288ffd7b910e"
+  },
+  "E:\\SCHOOL\\cs224 project\\GitBite\\frontend\\src\\utils\\Hooks\\Tanstack\\Dish\\useQuerySingleDish.ts": {
+    "mtime": 1780462627.1149857,
+    "ast_hash": "7549ae0964edf6a3b3c2e094ae01e755",
+    "semantic_hash": "7549ae0964edf6a3b3c2e094ae01e755"
   }
 }

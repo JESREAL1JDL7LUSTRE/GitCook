@@ -1,133 +1,6 @@
 {
   "communities": {
     "0": [
-      "api_dishapi_getdishes",
-      "buttons_cartbutton",
-      "buttons_cartbutton_plantoorderbuttonprops",
-      "buttons_orderbutton",
-      "buttons_paymentbutton",
-      "buttons_paymentbutton_paymentbuttonprops",
-      "buttons_sidecartbutton_cartbuttonprops",
-      "cards_orderhistorycard",
-      "cards_orderhistorycard_ordereditem",
-      "cards_orderhistorycard_orderprops",
-      "cards_orderhistorycard_payment",
-      "contents_featured",
-      "contents_footer",
-      "contents_footer_footer",
-      "contents_layout",
-      "contents_layout_layout2",
-      "contents_sidecart",
-      "contents_sidecart_sidecart",
-      "context_plantoordercontext",
-      "context_plantoordercontext_dish",
-      "context_plantoordercontext_plantoorderstate",
-      "context_plantoordercontext_useplantoorderstore",
-      "deletebuttons_cartdelbutton",
-      "deletebuttons_cartdelbutton_cartdelbuttonprops",
-      "deletebuttons_orderdelbutton",
-      "deletebuttons_orderdelbutton_cartdelbutton",
-      "deletebuttons_orderdelbutton_cartdelbuttonprops",
-      "dish_usequerydish",
-      "dish_usequerydish_usequerydishes",
-      "lib_addtoorderwhenpayingstore",
-      "lib_addtoorderwhenpayingstore_orderstate",
-      "lib_addtoorderwhenpayingstore_useaddtoorderwhenpayingstore",
-      "lib_utils",
-      "lib_utils_cn",
-      "pages_products",
-      "pages_products_products",
-      "popups_paymentpopupform",
-      "popups_payunpaidorderform",
-      "popups_payunpaidorderform_dishdetails",
-      "reviews_addreview",
-      "reviews_addreview_addreviewprops",
-      "reviews_reviewsfordish",
-      "reviews_starrating",
-      "reviews_starrating_starrating",
-      "reviews_starrating_starratingprops",
-      "src_app",
-      "src_app_app",
-      "ui_alert_dialog",
-      "ui_alert_dialog_alertdialogaction",
-      "ui_alert_dialog_alertdialogcancel",
-      "ui_alert_dialog_alertdialogcontent",
-      "ui_alert_dialog_alertdialogdescription",
-      "ui_alert_dialog_alertdialogfooter",
-      "ui_alert_dialog_alertdialogheader",
-      "ui_alert_dialog_alertdialogoverlay",
-      "ui_alert_dialog_alertdialogtitle",
-      "ui_button",
-      "ui_button_button",
-      "ui_button_buttonprops",
-      "ui_button_buttonvariants",
-      "ui_checkbox",
-      "ui_pagination",
-      "ui_pagination_paginationcontent",
-      "ui_pagination_paginationellipsis",
-      "ui_pagination_paginationitem",
-      "ui_pagination_paginationlinkprops",
-      "ui_pagination_paginationprevious"
-    ],
-    "1": [
-      "accounts_views_changepasswordview_post",
-      "api_changepassapi",
-      "api_dishapi_getreviews",
-      "apiview",
-      "buttons_wishlistbutton",
-      "buttons_wishlistbutton_wishlistbuttonprops",
-      "cards_productcard",
-      "cards_productcard_productcardprops",
-      "cards_productdetailscard_productdetailsprops",
-      "cards_wishlistcard",
-      "cards_wishlistcard_wishlistcardprops",
-      "dish_useinfinitequerydish",
-      "dish_useinfinitequerydish_fetchdishes",
-      "dish_useinfinitequerydish_usefetchdishes",
-      "pages_about",
-      "pages_about_about",
-      "pages_changepassword",
-      "pages_changepassword_changepassword",
-      "pages_forgotpassword",
-      "pages_forgotpassword_forgotpassword",
-      "pages_notfound",
-      "pages_notfound_notfound",
-      "pages_productdetails",
-      "pages_productdetails_productdetailpage",
-      "pages_profile",
-      "pages_signin",
-      "pages_signin_signin",
-      "pages_signin_signinform",
-      "pages_signup",
-      "pages_signup_signup",
-      "pages_signup_signupform",
-      "pages_termsandcondition",
-      "profile_usemutatechangepassword",
-      "profile_usemutatechangepassword_usepostchangepassword",
-      "profile_usemutateforgotpassword",
-      "profile_usemutateforgotpassword_usepostforgotpassword",
-      "review_usequeryreview",
-      "review_usequeryreview_usefetchreviews",
-      "reviews_reviewsfordish_reviewsfordish",
-      "reviews_starratingshow",
-      "reviews_starratingshow_starratingshowprops",
-      "src_layout",
-      "src_layout_layout",
-      "src_main",
-      "ui_card",
-      "ui_card_card",
-      "ui_card_cardcontent",
-      "ui_card_carddescription",
-      "ui_card_cardfooter",
-      "ui_card_cardheader",
-      "ui_card_cardtitle",
-      "ui_input",
-      "ui_input_input",
-      "ui_label",
-      "ui_label_label",
-      "ui_label_labelvariants"
-    ],
-    "2": [
       "api_api",
       "api_api_api",
       "api_api_getcart",
@@ -139,6 +12,8 @@
       "api_constant",
       "api_dishapi",
       "api_dishapi_getcategories",
+      "api_dishapi_getdishbyid",
+      "api_dishapi_getdishes",
       "api_dishapi_postreview",
       "api_orderapi",
       "api_orderapi_createorder",
@@ -151,11 +26,17 @@
       "api_profileapi_getprofileb",
       "api_profileapi_updateprofile",
       "components_protectedroute",
+      "contents_featured",
       "dish_usequerycategory",
+      "dish_usequerycategory_usefetchcategory",
+      "dish_usequerydish",
+      "dish_usequerydish_usequerydishes",
+      "dish_usequerysingledish",
       "order_usemutationorder",
       "order_usemutationorder_useordermutations",
       "order_usequeryorder",
       "pages_previousorders",
+      "pages_products_products",
       "pages_profile_profile",
       "pages_wishlist",
       "payment_usemutationpayment",
@@ -179,12 +60,122 @@
       "types_types_paymentmethod",
       "types_types_profiledata",
       "types_types_reviewdata",
-      "types_types_reviewsitem",
       "wishlist_usemutationcart",
       "wishlist_usequerycart"
     ],
+    "1": [
+      "abstractuser",
+      "accounts_admin",
+      "accounts_admin_customeradmin",
+      "accounts_admin_customeradmin_image_display",
+      "accounts_models",
+      "accounts_models_customer",
+      "accounts_models_customer_str",
+      "accounts_serializers",
+      "accounts_serializers_customerserializer",
+      "accounts_serializers_customerserializer_create",
+      "accounts_serializers_customerserializer_get_image",
+      "accounts_serializers_customertokenobtainserializer",
+      "accounts_serializers_customertokenobtainserializer_validate",
+      "accounts_serializers_meta",
+      "accounts_serializers_rationale_33",
+      "accounts_urls",
+      "accounts_views",
+      "accounts_views_changepasswordview_post",
+      "accounts_views_customerprofileview",
+      "accounts_views_customerprofileview_get_object",
+      "accounts_views_customertokenobtainview",
+      "accounts_views_customerviewset",
+      "accounts_views_customerviewset_get_permissions",
+      "accounts_views_rationale_23",
+      "accounts_views_resetpassworddirectlyview",
+      "apiview",
+      "store_admin",
+      "store_admin_cartadmin",
+      "store_admin_categoryadmin",
+      "store_admin_dishadmin",
+      "store_admin_meta",
+      "store_admin_orderadmin",
+      "store_admin_ordereditemadmin",
+      "store_admin_paymentadmin",
+      "store_admin_paymentform",
+      "store_admin_paymentform_save",
+      "store_admin_reviewsadmin",
+      "store_models",
+      "store_models_cart",
+      "store_models_category",
+      "store_models_dish",
+      "store_models_dish_str",
+      "store_models_meta",
+      "store_models_order",
+      "store_models_order_update_status_from_payments",
+      "store_models_order_update_total_price",
+      "store_models_ordereditem",
+      "store_models_ordereditem_delete",
+      "store_models_payment",
+      "store_models_payment_save",
+      "store_models_rationale_62",
+      "store_models_reviews",
+      "tokenviewbase",
+      "useradmin"
+    ],
+    "2": [
+      "jquery_jquery_min",
+      "jquery_jquery_min_a",
+      "jquery_jquery_min_ae",
+      "jquery_jquery_min_at",
+      "jquery_jquery_min_b",
+      "jquery_jquery_min_be",
+      "jquery_jquery_min_c",
+      "jquery_jquery_min_ct",
+      "jquery_jquery_min_dt",
+      "jquery_jquery_min_e",
+      "jquery_jquery_min_ee",
+      "jquery_jquery_min_f",
+      "jquery_jquery_min_fe",
+      "jquery_jquery_min_g",
+      "jquery_jquery_min_ge",
+      "jquery_jquery_min_gt",
+      "jquery_jquery_min_he",
+      "jquery_jquery_min_ht",
+      "jquery_jquery_min_i",
+      "jquery_jquery_min_ie",
+      "jquery_jquery_min_it",
+      "jquery_jquery_min_j",
+      "jquery_jquery_min_k",
+      "jquery_jquery_min_kt",
+      "jquery_jquery_min_l",
+      "jquery_jquery_min_le",
+      "jquery_jquery_min_m",
+      "jquery_jquery_min_n",
+      "jquery_jquery_min_ne",
+      "jquery_jquery_min_o",
+      "jquery_jquery_min_ot",
+      "jquery_jquery_min_p",
+      "jquery_jquery_min_pt",
+      "jquery_jquery_min_q",
+      "jquery_jquery_min_qe",
+      "jquery_jquery_min_re",
+      "jquery_jquery_min_rt",
+      "jquery_jquery_min_se",
+      "jquery_jquery_min_t",
+      "jquery_jquery_min_te",
+      "jquery_jquery_min_tt",
+      "jquery_jquery_min_u",
+      "jquery_jquery_min_ut",
+      "jquery_jquery_min_v",
+      "jquery_jquery_min_vt",
+      "jquery_jquery_min_w",
+      "jquery_jquery_min_we",
+      "jquery_jquery_min_x",
+      "jquery_jquery_min_y",
+      "jquery_jquery_min_ye",
+      "jquery_jquery_min_yt",
+      "jquery_jquery_min_z",
+      "jquery_jquery_min_ze",
+      "js_highlight_pack_h"
+    ],
     "3": [
-      "js_highlight_pack_h",
       "js_jquery_3_7_1_min",
       "js_jquery_3_7_1_min_a",
       "js_jquery_3_7_1_min_ae",
@@ -240,61 +231,6 @@
       "js_jquery_3_7_1_min_ze"
     ],
     "4": [
-      "jquery_jquery_min",
-      "jquery_jquery_min_a",
-      "jquery_jquery_min_ae",
-      "jquery_jquery_min_at",
-      "jquery_jquery_min_b",
-      "jquery_jquery_min_be",
-      "jquery_jquery_min_c",
-      "jquery_jquery_min_ct",
-      "jquery_jquery_min_dt",
-      "jquery_jquery_min_e",
-      "jquery_jquery_min_ee",
-      "jquery_jquery_min_f",
-      "jquery_jquery_min_fe",
-      "jquery_jquery_min_g",
-      "jquery_jquery_min_ge",
-      "jquery_jquery_min_gt",
-      "jquery_jquery_min_he",
-      "jquery_jquery_min_ht",
-      "jquery_jquery_min_i",
-      "jquery_jquery_min_ie",
-      "jquery_jquery_min_it",
-      "jquery_jquery_min_j",
-      "jquery_jquery_min_k",
-      "jquery_jquery_min_kt",
-      "jquery_jquery_min_l",
-      "jquery_jquery_min_le",
-      "jquery_jquery_min_m",
-      "jquery_jquery_min_n",
-      "jquery_jquery_min_ne",
-      "jquery_jquery_min_o",
-      "jquery_jquery_min_ot",
-      "jquery_jquery_min_p",
-      "jquery_jquery_min_pt",
-      "jquery_jquery_min_q",
-      "jquery_jquery_min_qe",
-      "jquery_jquery_min_re",
-      "jquery_jquery_min_rt",
-      "jquery_jquery_min_se",
-      "jquery_jquery_min_t",
-      "jquery_jquery_min_te",
-      "jquery_jquery_min_tt",
-      "jquery_jquery_min_u",
-      "jquery_jquery_min_ut",
-      "jquery_jquery_min_v",
-      "jquery_jquery_min_vt",
-      "jquery_jquery_min_w",
-      "jquery_jquery_min_we",
-      "jquery_jquery_min_x",
-      "jquery_jquery_min_y",
-      "jquery_jquery_min_ye",
-      "jquery_jquery_min_yt",
-      "jquery_jquery_min_z",
-      "jquery_jquery_min_ze"
-    ],
-    "5": [
       "select2_select2_full",
       "select2_select2_full_ajaxadapter",
       "select2_select2_full_allowclear",
@@ -349,61 +285,7 @@
       "select2_select2_full_uppercaseletter",
       "select2_select2_full_wrapper"
     ],
-    "6": [
-      "abstractuser",
-      "accounts_admin",
-      "accounts_admin_customeradmin",
-      "accounts_admin_customeradmin_image_display",
-      "accounts_models",
-      "accounts_models_customer",
-      "accounts_models_customer_str",
-      "accounts_serializers",
-      "accounts_serializers_customerserializer",
-      "accounts_serializers_customerserializer_create",
-      "accounts_serializers_customerserializer_get_image",
-      "accounts_serializers_customertokenobtainserializer",
-      "accounts_serializers_customertokenobtainserializer_validate",
-      "accounts_serializers_meta",
-      "accounts_serializers_rationale_33",
-      "accounts_urls",
-      "accounts_views",
-      "accounts_views_customerprofileview",
-      "accounts_views_customerprofileview_get_object",
-      "accounts_views_customertokenobtainview",
-      "accounts_views_customerviewset",
-      "accounts_views_customerviewset_get_permissions",
-      "accounts_views_rationale_23",
-      "accounts_views_resetpassworddirectlyview",
-      "store_admin",
-      "store_admin_cartadmin",
-      "store_admin_categoryadmin",
-      "store_admin_dishadmin",
-      "store_admin_meta",
-      "store_admin_orderadmin",
-      "store_admin_ordereditemadmin",
-      "store_admin_paymentadmin",
-      "store_admin_paymentform",
-      "store_admin_paymentform_save",
-      "store_admin_reviewsadmin",
-      "store_models",
-      "store_models_cart",
-      "store_models_category",
-      "store_models_dish",
-      "store_models_dish_str",
-      "store_models_meta",
-      "store_models_order",
-      "store_models_order_update_status_from_payments",
-      "store_models_order_update_total_price",
-      "store_models_ordereditem",
-      "store_models_ordereditem_delete",
-      "store_models_payment",
-      "store_models_payment_save",
-      "store_models_rationale_62",
-      "store_models_reviews",
-      "tokenviewbase",
-      "useradmin"
-    ],
-    "7": [
+    "5": [
       "frontend_package",
       "frontend_package_dependencies",
       "frontend_package_dependencies_axios",
@@ -453,7 +335,7 @@
       "frontend_package_type",
       "frontend_package_version"
     ],
-    "8": [
+    "6": [
       "js_coreapi_0_1_1",
       "js_coreapi_0_1_1_basicauthentication",
       "js_coreapi_0_1_1_body",
@@ -503,7 +385,7 @@
       "js_coreapi_0_1_1_url",
       "js_coreapi_0_1_1_urltemplate"
     ],
-    "9": [
+    "7": [
       "jquery_jquery",
       "jquery_jquery_addgethookif",
       "jquery_jquery_addtoprefiltersortransports",
@@ -545,7 +427,7 @@
       "jquery_jquery_vendorpropname",
       "jquery_jquery_winnow"
     ],
-    "10": [
+    "8": [
       "xregexp_xregexp",
       "xregexp_xregexp_addmatch",
       "xregexp_xregexp_arrayliketoarray",
@@ -587,7 +469,7 @@
       "xregexp_xregexp_unsupportediterabletoarray",
       "xregexp_xregexp_xregexp"
     ],
-    "11": [
+    "9": [
       "pagenumberpagination",
       "store_serializers",
       "store_serializers_cartserializers",
@@ -620,7 +502,7 @@
       "store_views_paymentlistcreateviewset",
       "store_views_reviewviewset"
     ],
-    "12": [
+    "10": [
       "xregexp_xregexp_min",
       "xregexp_xregexp_min_addmatch",
       "xregexp_xregexp_min_arrayliketoarray",
@@ -650,8 +532,34 @@
       "xregexp_xregexp_min_setnamespacing",
       "xregexp_xregexp_min_xregexp"
     ],
-    "13": [
-      "dish_usequerycategory_usefetchcategory",
+    "11": [
+      "api_dishapi_getreviews",
+      "buttons_wishlistbutton",
+      "buttons_wishlistbutton_wishlistbuttonprops",
+      "cards_productcard",
+      "cards_productcard_productcardprops",
+      "cards_productdetailscard_productdetailsprops",
+      "cards_wishlistcard",
+      "cards_wishlistcard_wishlistcardprops",
+      "pages_productdetails",
+      "pages_signin",
+      "pages_signin_signin",
+      "pages_signin_signinform",
+      "review_usequeryreview",
+      "review_usequeryreview_usefetchreviews",
+      "reviews_reviewsfordish_reviewsfordish",
+      "reviews_starratingshow",
+      "reviews_starratingshow_starratingshowprops",
+      "types_types_reviewsitem",
+      "ui_card",
+      "ui_card_card",
+      "ui_card_cardcontent",
+      "ui_card_carddescription",
+      "ui_card_cardfooter",
+      "ui_card_cardheader",
+      "ui_card_cardtitle"
+    ],
+    "12": [
       "dropdowns_categorydropdown",
       "navbar_desktopnav",
       "navbar_desktopnav_desktopnavprops",
@@ -677,6 +585,32 @@
       "user_issigninornot_refreshtoken",
       "user_signout",
       "user_signout_signout"
+    ],
+    "13": [
+      "cards_orderhistorycard",
+      "cards_orderhistorycard_ordereditem",
+      "cards_orderhistorycard_orderprops",
+      "cards_orderhistorycard_payment",
+      "contents_sidecart",
+      "deletebuttons_cartdelbutton",
+      "deletebuttons_cartdelbutton_cartdelbuttonprops",
+      "deletebuttons_orderdelbutton",
+      "deletebuttons_orderdelbutton_cartdelbuttonprops",
+      "popups_paymentpopupform",
+      "popups_payunpaidorderform",
+      "popups_payunpaidorderform_dishdetails",
+      "reviews_addreview",
+      "reviews_addreview_addreviewprops",
+      "reviews_reviewsfordish",
+      "ui_alert_dialog",
+      "ui_alert_dialog_alertdialogaction",
+      "ui_alert_dialog_alertdialogcancel",
+      "ui_alert_dialog_alertdialogcontent",
+      "ui_alert_dialog_alertdialogdescription",
+      "ui_alert_dialog_alertdialogfooter",
+      "ui_alert_dialog_alertdialogheader",
+      "ui_alert_dialog_alertdialogoverlay",
+      "ui_alert_dialog_alertdialogtitle"
     ],
     "14": [
       "frontend_tsconfig_app",
@@ -785,6 +719,25 @@
       "js_highlight_pack_v"
     ],
     "19": [
+      "buttons_cartbutton",
+      "buttons_orderbutton",
+      "buttons_paymentbutton",
+      "buttons_paymentbutton_paymentbuttonprops",
+      "buttons_sidecartbutton_cartbuttonprops",
+      "contents_layout",
+      "contents_layout_layout2",
+      "contents_sidecart_sidecart",
+      "context_plantoordercontext",
+      "context_plantoordercontext_dish",
+      "context_plantoordercontext_plantoorderstate",
+      "context_plantoordercontext_useplantoorderstore",
+      "featureddish_component",
+      "lib_addtoorderwhenpayingstore",
+      "lib_addtoorderwhenpayingstore_orderstate",
+      "lib_addtoorderwhenpayingstore_useaddtoorderwhenpayingstore",
+      "plantoorderbutton_component"
+    ],
+    "20": [
       "select2_select2_full_min",
       "select2_select2_full_min_a",
       "select2_select2_full_min_b",
@@ -803,7 +756,25 @@
       "select2_select2_full_min_x",
       "select2_select2_full_min_y"
     ],
-    "20": [
+    "21": [
+      "lib_utils",
+      "lib_utils_cn",
+      "pages_products",
+      "ui_button",
+      "ui_button_buttonprops",
+      "ui_button_buttonvariants",
+      "ui_checkbox",
+      "ui_label",
+      "ui_label_label",
+      "ui_label_labelvariants",
+      "ui_pagination",
+      "ui_pagination_paginationcontent",
+      "ui_pagination_paginationellipsis",
+      "ui_pagination_paginationitem",
+      "ui_pagination_paginationlinkprops",
+      "ui_pagination_paginationprevious"
+    ],
+    "22": [
       "admin_relatedobjectlookups",
       "admin_relatedobjectlookups_addpopupindex",
       "admin_relatedobjectlookups_dismissaddrelatedobjectpopup",
@@ -819,7 +790,38 @@
       "admin_relatedobjectlookups_updaterelatedobjectlinks",
       "admin_relatedobjectlookups_updaterelatedselectsoptions"
     ],
-    "21": [
+    "23": [
+      "api_changepassapi",
+      "pages_changepassword",
+      "pages_forgotpassword",
+      "pages_profile",
+      "pages_signup",
+      "pages_signup_signup",
+      "pages_signup_signupform",
+      "profile_usemutatechangepassword",
+      "profile_usemutatechangepassword_usepostchangepassword",
+      "profile_usemutateforgotpassword",
+      "profile_usemutateforgotpassword_usepostforgotpassword",
+      "ui_button_button",
+      "ui_input",
+      "ui_input_input"
+    ],
+    "24": [
+      "contents_footer",
+      "contents_footer_footer",
+      "pages_about",
+      "pages_about_about",
+      "pages_notfound",
+      "pages_notfound_notfound",
+      "pages_termsandcondition",
+      "src_app",
+      "src_app_app",
+      "src_layout",
+      "src_layout_layout",
+      "src_main",
+      "src_main_queryclient"
+    ],
+    "25": [
       "migrations_0002_alter_payment_transaction_id",
       "migrations_0002_alter_payment_transaction_id_migration",
       "migrations_0003_alter_payment_transaction_id_migration",
@@ -833,7 +835,7 @@
       "migrations_0015_alter_payment_transaction_id_migration",
       "migrations_0016_alter_payment_transaction_id_migration"
     ],
-    "22": [
+    "26": [
       "js_actions",
       "js_actions_affectedcheckboxes",
       "js_actions_checker",
@@ -846,7 +848,7 @@
       "js_actions_showquestion",
       "js_actions_updatecounter"
     ],
-    "23": [
+    "27": [
       "jquery_jquery_buildfragment",
       "jquery_jquery_buildparams",
       "jquery_jquery_clonecopyevent",
@@ -858,7 +860,7 @@
       "jquery_jquery_setglobaleval",
       "jquery_jquery_totype"
     ],
-    "24": [
+    "28": [
       "js_prettify_min",
       "js_prettify_min_b",
       "js_prettify_min_c",
@@ -870,7 +872,7 @@
       "js_prettify_min_u",
       "js_prettify_min_x"
     ],
-    "25": [
+    "29": [
       "jquery_jquery_adoptvalue",
       "jquery_jquery_ajaxconvert",
       "jquery_jquery_ajaxhandleresponses",
@@ -880,7 +882,7 @@
       "jquery_jquery_getdefaultdisplay",
       "jquery_jquery_showhide"
     ],
-    "26": [
+    "30": [
       "js_bootstrap_min",
       "js_bootstrap_min_e",
       "js_bootstrap_min_i",
@@ -890,7 +892,7 @@
       "js_bootstrap_min_s",
       "js_bootstrap_min_u"
     ],
-    "27": [
+    "31": [
       "frontend_tsconfig",
       "frontend_tsconfig_compileroptions",
       "frontend_tsconfig_compileroptions_baseurl",
@@ -899,7 +901,7 @@
       "frontend_tsconfig_paths",
       "frontend_tsconfig_references"
     ],
-    "28": [
+    "32": [
       "jquery_jquery_boxmodeladjustment",
       "jquery_jquery_createbuttonpseudo",
       "jquery_jquery_createinputpseudo",
@@ -908,7 +910,7 @@
       "jquery_jquery_manipulationtarget",
       "jquery_jquery_nodename"
     ],
-    "29": [
+    "33": [
       "js_api",
       "js_api_formentries",
       "js_api_normalizehttpheader",
@@ -916,598 +918,615 @@
       "js_api_requestcallback",
       "js_api_responsecallback"
     ],
-    "30": [
+    "34": [
       "accounts_apps",
       "accounts_apps_accountsconfig",
       "appconfig",
       "store_apps",
       "store_apps_storeconfig"
     ],
-    "31": [
+    "35": [
       "jquery_jquery_animation",
       "jquery_jquery_camelcase",
       "jquery_jquery_createfxnow",
       "jquery_jquery_propfilter",
       "jquery_jquery_tween"
     ],
-    "32": [
+    "36": [
       "js_core",
       "js_core_findposx",
       "js_core_findposy",
       "js_core_quickelement",
       "js_core_removechildren"
     ],
-    "33": [
+    "37": [
       "5177922_ad507ccfe07d491eba9ad48c0ea8e114_image",
       "customers_directory",
       "download_2_image",
       "screenshot_2025_02_19_10_34_16_020_com_ss_android_ugc_trill_image"
     ],
-    "34": [
+    "38": [
       "angel_png",
       "authors_pic_directory",
       "bea_png",
       "jesreal_png"
     ],
-    "35": [
+    "39": [
+      "backend_django",
+      "frontend_vite",
+      "how_to_run_gitbite",
+      "requirements_txt"
+    ],
+    "40": [
       "backend_vercel",
       "backend_vercel_builds",
       "backend_vercel_routes",
       "backend_vercel_version"
     ],
-    "36": [
+    "41": [
+      "dish_useinfinitequerydish",
+      "dish_useinfinitequerydish_fetchdishes",
+      "pages_productdetails_productdetailpage",
+      "usefetchdishes_hook"
+    ],
+    "42": [
       "js_ajax_form",
       "js_ajax_form_capturesubmittingelement",
       "js_ajax_form_doajaxsubmit",
       "js_ajax_form_replacedocument"
     ],
-    "37": [
+    "43": [
       "js_csrf",
       "js_csrf_csrfsafemethod",
       "js_csrf_getcookie",
       "js_csrf_sameorigin"
     ],
-    "38": [
+    "44": [
       "js_theme",
       "js_theme_cycletheme",
       "js_theme_inittheme",
       "js_theme_settheme"
     ],
-    "39": [
+    "45": [
       "admin_img_readme",
       "font_awesome",
       "icon_calendar_svg"
     ],
-    "40": [
+    "46": [
       "backend_manage",
       "backend_manage_main",
       "backend_manage_rationale_8"
     ],
-    "41": [
+    "47": [
       "core_asgi",
       "core_asgi_rationale_1",
       "core_wsgi"
     ],
-    "42": [
+    "48": [
       "frontend_index",
       "frontend_main",
       "gitcook_logo"
     ],
-    "43": [
+    "49": [
       "glyphicons_halflings_png",
       "glyphicons_halflings_regular",
       "glyphicons_halflings_white"
     ],
-    "44": [
+    "50": [
       "js_calendar",
       "js_calendar_calendar",
       "js_calendar_calendarmonth"
     ],
-    "45": [
+    "51": [
       "js_cancel",
       "js_cancel_handleclick",
       "js_cancel_ready"
     ],
-    "46": [
+    "52": [
       "js_urlify",
       "js_urlify_downcode",
       "js_urlify_urlify"
     ],
-    "47": [
+    "53": [
       "requirements_cloudinary",
       "requirements_django",
       "requirements_django_cloudinary_storage"
     ],
-    "48": [
+    "54": [
       "requirements_djangorestframework",
       "requirements_djangorestframework_simplejwt",
       "requirements_pyjwt"
     ],
-    "49": [
+    "55": [
+      "reviews_starrating",
+      "reviews_starrating_starrating",
+      "reviews_starrating_starratingprops"
+    ],
+    "56": [
       "1000033900_erfv4gf_jpg",
       "1000033900_jpg"
     ],
-    "50": [
+    "57": [
       "backend_accounts_migrations_0001_initial_py_migrations_0001_initial",
       "backend_accounts_migrations_0001_initial_py_migrations_0001_initial_migration"
     ],
-    "51": [
+    "58": [
       "backend_build",
       "e_school_cs224_project_gitbite_backend_build_sh__entry"
     ],
-    "52": [
+    "59": [
       "backend_store_migrations_0001_initial_py_migrations_0001_initial",
       "backend_store_migrations_0001_initial_py_migrations_0001_initial_migration"
     ],
-    "53": [
+    "60": [
       "core_settings",
       "core_settings_rationale_1"
     ],
-    "54": [
+    "61": [
       "core_urls",
       "core_urls_rationale_1"
     ],
-    "55": [
+    "62": [
       "frontend_vercel",
       "frontend_vercel_rewrites"
     ],
-    "56": [
+    "63": [
       "i18n_bs",
       "i18n_bs_e"
     ],
-    "57": [
+    "64": [
       "i18n_cs",
       "i18n_cs_e"
     ],
-    "58": [
+    "65": [
       "i18n_hr",
       "i18n_hr_n"
     ],
-    "59": [
+    "66": [
       "i18n_lt",
       "i18n_lt_n"
     ],
-    "60": [
+    "67": [
       "i18n_lv",
       "i18n_lv_e"
     ],
-    "61": [
+    "68": [
       "i18n_ru",
       "i18n_ru_n"
     ],
-    "62": [
+    "69": [
       "i18n_sr",
       "i18n_sr_n"
     ],
-    "63": [
+    "70": [
       "i18n_sr_cyrl",
       "i18n_sr_cyrl_n"
     ],
-    "64": [
+    "71": [
       "i18n_uk",
       "i18n_uk_n"
     ],
-    "65": [
+    "72": [
       "js_nav_sidebar",
       "js_nav_sidebar_initsidebarquickfilter"
     ],
-    "66": [
+    "73": [
       "js_selectbox",
       "js_selectbox_get_hidden_node_count"
     ],
-    "67": [
+    "74": [
       "logo_eaevaqy_logo",
       "logo_logo"
     ],
-    "68": [
+    "75": [
       "migrations_0002_remove_customer_customer_id",
       "migrations_0002_remove_customer_customer_id_migration"
     ],
-    "69": [
+    "76": [
       "migrations_0003_alter_customer_options_alter_customer_managers_and_more",
       "migrations_0003_alter_customer_options_alter_customer_managers_and_more_migration"
     ],
-    "70": [
+    "77": [
       "migrations_0008_alter_payment_amount_alter_payment_transaction_id_and_more",
       "migrations_0008_alter_payment_amount_alter_payment_transaction_id_and_more_migration"
     ],
-    "71": [
+    "78": [
       "migrations_0009_alter_payment_amount_alter_payment_transaction_id",
       "migrations_0009_alter_payment_amount_alter_payment_transaction_id_migration"
     ],
-    "72": [
+    "79": [
       "migrations_0010_alter_payment_payment_status_and_more",
       "migrations_0010_alter_payment_payment_status_and_more_migration"
     ],
-    "73": [
+    "80": [
       "migrations_0012_dish_featured_alter_dish_image_alter_payment_amount_and_more",
       "migrations_0012_dish_featured_alter_dish_image_alter_payment_amount_and_more_migration"
     ],
-    "74": [
+    "81": [
       "migrations_0014_alter_customer_image",
       "migrations_0014_alter_customer_image_migration"
     ],
-    "75": [
+    "82": [
       "select2_select2_full_calldep",
       "select2_select2_full_hasprop"
     ],
-    "76": [
+    "83": [
       "select2_select2_full_createandselect",
       "select2_select2_full_select"
     ],
-    "77": [
+    "84": [
       "select2_select2_full_handler",
       "select2_select2_full_shouldadjustolddeltas"
     ],
-    "78": [
+    "85": [
       "select2_select2_full_makenormalize",
       "select2_select2_full_normalize"
     ],
-    "79": [
+    "86": [
       "select2_select2_full_makerelparts",
       "select2_select2_full_splitprefix"
     ],
-    "80": [
+    "87": [
       "accounts_init"
     ],
-    "81": [
+    "88": [
       "accounts_tests"
     ],
-    "82": [
+    "89": [
       "admin_datetimeshortcuts"
     ],
-    "83": [
+    "90": [
       "backend_accounts_migrations_init_py_migrations_init"
     ],
-    "84": [
+    "91": [
       "backend_store_migrations_init_py_migrations_init"
     ],
-    "85": [
+    "92": [
       "core_init"
     ],
-    "86": [
+    "93": [
       "fontawesome_webfont"
     ],
-    "87": [
+    "94": [
       "frontend_eslint_config"
     ],
-    "88": [
+    "95": [
       "frontend_postcss_config"
     ],
-    "89": [
+    "96": [
       "frontend_readme"
     ],
-    "90": [
+    "97": [
       "frontend_tailwind_config"
     ],
-    "91": [
+    "98": [
       "frontend_vite_config"
     ],
-    "92": [
+    "99": [
       "i18n_af"
     ],
-    "93": [
+    "100": [
       "i18n_ar"
     ],
-    "94": [
+    "101": [
       "i18n_az"
     ],
-    "95": [
+    "102": [
       "i18n_bg"
     ],
-    "96": [
+    "103": [
       "i18n_bn"
     ],
-    "97": [
+    "104": [
       "i18n_ca"
     ],
-    "98": [
+    "105": [
       "i18n_da"
     ],
-    "99": [
+    "106": [
       "i18n_de"
     ],
-    "100": [
+    "107": [
       "i18n_dsb"
     ],
-    "101": [
+    "108": [
       "i18n_el"
     ],
-    "102": [
+    "109": [
       "i18n_en"
     ],
-    "103": [
+    "110": [
       "i18n_es"
     ],
-    "104": [
+    "111": [
       "i18n_et"
     ],
-    "105": [
+    "112": [
       "i18n_eu"
     ],
-    "106": [
+    "113": [
       "i18n_fa"
     ],
-    "107": [
+    "114": [
       "i18n_fi"
     ],
-    "108": [
+    "115": [
       "i18n_fr"
     ],
-    "109": [
+    "116": [
       "i18n_gl"
     ],
-    "110": [
+    "117": [
       "i18n_he"
     ],
-    "111": [
+    "118": [
       "i18n_hi"
     ],
-    "112": [
+    "119": [
       "i18n_hsb"
     ],
-    "113": [
+    "120": [
       "i18n_hu"
     ],
-    "114": [
+    "121": [
       "i18n_hy"
     ],
-    "115": [
+    "122": [
       "i18n_id"
     ],
-    "116": [
+    "123": [
       "i18n_is"
     ],
-    "117": [
+    "124": [
       "i18n_it"
     ],
-    "118": [
+    "125": [
       "i18n_ja"
     ],
-    "119": [
+    "126": [
       "i18n_ka"
     ],
-    "120": [
+    "127": [
       "i18n_km"
     ],
-    "121": [
+    "128": [
       "i18n_ko"
     ],
-    "122": [
+    "129": [
       "i18n_mk"
     ],
-    "123": [
+    "130": [
       "i18n_ms"
     ],
-    "124": [
+    "131": [
       "i18n_nb"
     ],
-    "125": [
+    "132": [
       "i18n_ne"
     ],
-    "126": [
+    "133": [
       "i18n_nl"
     ],
-    "127": [
+    "134": [
       "i18n_pl"
     ],
-    "128": [
+    "135": [
       "i18n_ps"
     ],
-    "129": [
+    "136": [
       "i18n_pt"
     ],
-    "130": [
+    "137": [
       "i18n_pt_br"
     ],
-    "131": [
+    "138": [
       "i18n_ro"
     ],
-    "132": [
+    "139": [
       "i18n_sk"
     ],
-    "133": [
+    "140": [
       "i18n_sl"
     ],
-    "134": [
+    "141": [
       "i18n_sq"
     ],
-    "135": [
+    "142": [
       "i18n_sv"
     ],
-    "136": [
+    "143": [
       "i18n_th"
     ],
-    "137": [
+    "144": [
       "i18n_tk"
     ],
-    "138": [
+    "145": [
       "i18n_tr"
     ],
-    "139": [
+    "146": [
       "i18n_vi"
     ],
-    "140": [
+    "147": [
       "i18n_zh_cn"
     ],
-    "141": [
+    "148": [
       "i18n_zh_tw"
     ],
-    "142": [
+    "149": [
       "jquery_license"
     ],
-    "143": [
+    "150": [
       "js_autocomplete"
     ],
-    "144": [
+    "151": [
       "js_change_form"
     ],
-    "145": [
+    "152": [
       "js_default"
     ],
-    "146": [
+    "153": [
       "js_filters"
     ],
-    "147": [
+    "154": [
       "js_inlines"
     ],
-    "148": [
+    "155": [
       "js_jquery_init"
     ],
-    "149": [
+    "156": [
       "js_jquery_json_view_min"
     ],
-    "150": [
+    "157": [
       "js_load_ajax_form"
     ],
-    "151": [
+    "158": [
       "js_popup_response"
     ],
-    "152": [
+    "159": [
       "js_prepopulate"
     ],
-    "153": [
+    "160": [
       "js_prepopulate_init"
     ],
-    "154": [
+    "161": [
       "js_selectfilter2"
     ],
-    "155": [
+    "162": [
       "license_select2_md"
     ],
-    "156": [
+    "163": [
       "logo_ezvrybl_png"
     ],
-    "157": [
+    "164": [
       "logo_hjevtvm_png"
     ],
-    "158": [
+    "165": [
       "pfp_jpg"
     ],
-    "159": [
+    "166": [
       "requirements_asgiref"
     ],
-    "160": [
+    "167": [
       "requirements_certifi"
     ],
-    "161": [
+    "168": [
       "requirements_charset_normalizer"
     ],
-    "162": [
+    "169": [
       "requirements_django_cors_headers"
     ],
-    "163": [
+    "170": [
       "requirements_django_filter"
     ],
-    "164": [
+    "171": [
       "requirements_idna"
     ],
-    "165": [
+    "172": [
       "requirements_pillow"
     ],
-    "166": [
+    "173": [
       "requirements_psycopg2_binary"
     ],
-    "167": [
+    "174": [
       "requirements_python_dotenv"
     ],
-    "168": [
+    "175": [
       "requirements_pytz"
     ],
-    "169": [
+    "176": [
       "requirements_requests"
     ],
-    "170": [
+    "177": [
       "requirements_six"
     ],
-    "171": [
+    "178": [
       "requirements_sqlparse"
     ],
-    "172": [
+    "179": [
       "requirements_tzdata"
     ],
-    "173": [
+    "180": [
       "requirements_urllib3"
     ],
-    "174": [
+    "181": [
       "requirements_whitenoise"
     ],
-    "175": [
+    "182": [
       "rest_framework_grid"
     ],
-    "176": [
+    "183": [
       "src_vite_env_d"
     ],
-    "177": [
+    "184": [
       "store_init"
     ],
-    "178": [
+    "185": [
       "store_tests"
     ],
-    "179": [
+    "186": [
       "ui_aspect_ratio"
     ],
-    "180": [
+    "187": [
       "xregexp_license"
     ]
   },
   "cohesion": {
-    "0": 0.07553143374038897,
-    "1": 0.07532467532467532,
-    "2": 0.07197763801537387,
-    "3": 0.06638714185883997,
-    "4": 0.06821480406386067,
-    "5": 0.03773584905660377,
-    "6": 0.11840120663650075,
-    "7": 0.041666666666666664,
-    "8": 0.07180851063829788,
-    "9": 0.05384615384615385,
-    "10": 0.07692307692307693,
-    "11": 0.08172043010752689,
-    "12": 0.10052910052910052,
-    "13": 0.10461538461538461,
+    "0": 0.06229508196721312,
+    "1": 0.1111111111111111,
+    "2": 0.06638714185883997,
+    "3": 0.06821480406386067,
+    "4": 0.03773584905660377,
+    "5": 0.041666666666666664,
+    "6": 0.07180851063829788,
+    "7": 0.05384615384615385,
+    "8": 0.07692307692307693,
+    "9": 0.08172043010752689,
+    "10": 0.10052910052910052,
+    "11": 0.16666666666666666,
+    "12": 0.11,
+    "13": 0.2536231884057971,
     "14": 0.08695652173913043,
     "15": 0.1695906432748538,
     "16": 0.1111111111111111,
     "17": 0.1111111111111111,
     "18": 0.24183006535947713,
-    "19": 0.14705882352941177,
-    "20": 0.24175824175824176,
-    "21": 0.16666666666666666,
-    "22": 0.38181818181818183,
-    "23": 0.24444444444444444,
-    "24": 0.3111111111111111,
-    "25": 0.25,
-    "26": 0.5357142857142857,
-    "27": 0.2857142857142857,
-    "28": 0.2857142857142857,
-    "29": 0.4,
-    "30": 0.4,
-    "31": 0.4,
-    "32": 0.4,
-    "33": 0.6666666666666666,
-    "34": 0.5,
-    "35": 0.5,
-    "36": 0.6666666666666666,
-    "37": 0.5,
-    "38": 0.8333333333333334,
+    "19": 0.17647058823529413,
+    "20": 0.14705882352941177,
+    "21": 0.225,
+    "22": 0.24175824175824176,
+    "23": 0.27472527472527475,
+    "24": 0.16666666666666666,
+    "25": 0.16666666666666666,
+    "26": 0.38181818181818183,
+    "27": 0.24444444444444444,
+    "28": 0.3111111111111111,
+    "29": 0.25,
+    "30": 0.5357142857142857,
+    "31": 0.2857142857142857,
+    "32": 0.2857142857142857,
+    "33": 0.4,
+    "34": 0.4,
+    "35": 0.4,
+    "36": 0.4,
+    "37": 0.6666666666666666,
+    "38": 0.5,
     "39": 0.6666666666666666,
-    "40": 0.6666666666666666,
-    "41": 0.6666666666666666,
+    "40": 0.5,
+    "41": 0.5,
     "42": 0.6666666666666666,
-    "43": 0.6666666666666666,
-    "44": 0.6666666666666666,
+    "43": 0.5,
+    "44": 0.8333333333333334,
     "45": 0.6666666666666666,
-    "46": 1.0,
+    "46": 0.6666666666666666,
     "47": 0.6666666666666666,
     "48": 0.6666666666666666,
-    "49": 1.0,
-    "50": 1.0,
-    "51": 1.0,
+    "49": 0.6666666666666666,
+    "50": 0.6666666666666666,
+    "51": 0.6666666666666666,
     "52": 1.0,
-    "53": 1.0,
-    "54": 1.0,
-    "55": 1.0,
+    "53": 0.6666666666666666,
+    "54": 0.6666666666666666,
+    "55": 0.6666666666666666,
     "56": 1.0,
     "57": 1.0,
     "58": 1.0,
@@ -1632,7 +1651,14 @@
     "177": 1.0,
     "178": 1.0,
     "179": 1.0,
-    "180": 1.0
+    "180": 1.0,
+    "181": 1.0,
+    "182": 1.0,
+    "183": 1.0,
+    "184": 1.0,
+    "185": 1.0,
+    "186": 1.0,
+    "187": 1.0
   },
   "gods": [
     {
@@ -1699,6 +1725,17 @@
       "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image)"
     },
     {
+      "source": "FeaturedDish Component",
+      "target": "useFetchDishes Hook",
+      "source_files": [
+        "frontend/src/components/FeaturedDish.txt",
+        "frontend/src/utils/Hooks/FetchHooks/useFetchDish2.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "crosses file types (doc \u2194 code); bridges separate communities"
+    },
+    {
       "source": "Meta",
       "target": "Customer",
       "source_files": [
@@ -1713,7 +1750,7 @@
       "source": "I()",
       "target": "h()",
       "source_files": [
-        "backend/staticfiles/admin/js/vendor/jquery/jquery.min.js",
+        "backend/staticfiles/rest_framework/js/jquery-3.7.1.min.js",
         "backend/staticfiles/rest_framework/docs/js/highlight.pack.js"
       ],
       "confidence": "INFERRED",
@@ -1730,21 +1767,10 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "bridges separate communities; peripheral node `DropdownMenuShortcut()` unexpectedly reaches hub `cn()`"
-    },
-    {
-      "source": "Glyphicons Halflings White Sprite",
-      "target": "Glyphicons Halflings Sprite",
-      "source_files": [
-        "backend/staticfiles/rest_framework/img/glyphicons-halflings-white.png",
-        "backend/staticfiles/rest_framework/img/glyphicons-halflings.png"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
     }
   ],
   "tokens": {
-    "input": 317141,
-    "output": 7078
+    "input": 46511,
+    "output": 1674
   }
 }
