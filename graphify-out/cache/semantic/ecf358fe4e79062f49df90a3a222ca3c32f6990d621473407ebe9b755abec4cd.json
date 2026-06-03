@@ -1,0 +1,1 @@
+{"nodes": [{"id": "angel_png", "label": "Angel.png", "file_type": "image", "source_file": "frontend/public/AuthorsPic/Angel.png"}], "edges": [{"source": "angel_png", "target": "authors_pic_directory", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "frontend/public/AuthorsPic/Angel.png"}], "hyperedges": []}

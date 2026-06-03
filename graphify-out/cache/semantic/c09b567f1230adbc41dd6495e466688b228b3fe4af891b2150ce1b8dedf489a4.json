@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [{"source": "license_select2_md", "target": "js_vendor_select2_license", "relation": "semantically_similar_to", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "backend/staticfiles/admin/js/vendor/select2/LICENSE.md", "source_location": null, "weight": 1.0}], "hyperedges": []}

@@ -9,8 +9,10 @@ export const getProfileB = async (): Promise<ProfileData> => {
   try {
     const res = await api.get<ProfileData>("/api/profile/");
     return res.data;
-  } catch (error) {
-    console.error("❌ Error fetching profile:", error);
+  } catch (error: any) {
+    if (error.response?.status !== 401) {
+      console.error("❌ Error fetching profile:", error);
+    }
     throw error;
   }
 };
